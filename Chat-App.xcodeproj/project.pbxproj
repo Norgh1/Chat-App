@@ -16,6 +16,11 @@
 		FBCA215328928094005B6722 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215228928094005B6722 /* ChatManager.swift */; };
 		FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215528928158005B6722 /* UserDefaultsService.swift */; };
 		FBCA215928928187005B6722 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215828928187005B6722 /* ConversationCell.swift */; };
+		FBCA215C28928246005B6722 /* ObjectUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215B28928246005B6722 /* ObjectUser.swift */; };
+		FBCA215F28928359005B6722 /* ObjectConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215E28928359005B6722 /* ObjectConversation.swift */; };
+		FBCA216128928360005B6722 /* ObjectMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA216028928360005B6722 /* ObjectMessage.swift */; };
+		FBCA21632892857B005B6722 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA21622892857B005B6722 /* Coordinator.swift */; };
+		FBCA2166289285B3005B6722 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA2165289285B3005B6722 /* NSObjectExtension.swift */; };
 		FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DA28927A8D008C64C3 /* AppDelegate.swift */; };
 		FBF1D4DD28927A8D008C64C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DC28927A8D008C64C3 /* SceneDelegate.swift */; };
 		FBF1D4DF28927A8D008C64C3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DE28927A8D008C64C3 /* OnboardingViewController.swift */; };
@@ -34,6 +39,11 @@
 		FBCA215228928094005B6722 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		FBCA215528928158005B6722 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		FBCA215828928187005B6722 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		FBCA215B28928246005B6722 /* ObjectUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectUser.swift; sourceTree = "<group>"; };
+		FBCA215E28928359005B6722 /* ObjectConversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectConversation.swift; sourceTree = "<group>"; };
+		FBCA216028928360005B6722 /* ObjectMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMessage.swift; sourceTree = "<group>"; };
+		FBCA21622892857B005B6722 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FBCA2165289285B3005B6722 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		FBF1D4D728927A8D008C64C3 /* Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF1D4DA28927A8D008C64C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF1D4DC28927A8D008C64C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +111,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FBCA215D2892824A005B6722 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBCA215B28928246005B6722 /* ObjectUser.swift */,
+				FBCA215E28928359005B6722 /* ObjectConversation.swift */,
+				FBCA216028928360005B6722 /* ObjectMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FBCA21642892858E005B6722 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				FBCA21622892857B005B6722 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		FBCA2167289285C3005B6722 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBCA2165289285B3005B6722 /* NSObjectExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FBF1D4CE28927A8D008C64C3 = {
 			isa = PBXGroup;
 			children = (
@@ -121,10 +157,13 @@
 			isa = PBXGroup;
 			children = (
 				FBCA214528927EC0005B6722 /* Storyboard */,
+				FBCA21642892858E005B6722 /* Coordinators */,
 				FBCA215A2892818B005B6722 /* Views */,
 				FBCA214428927EAF005B6722 /* ViewControllers */,
 				FBCA215428928143005B6722 /* Managers */,
 				FBCA21572892815F005B6722 /* Services */,
+				FBCA215D2892824A005B6722 /* Models */,
+				FBCA2167289285C3005B6722 /* Extensions */,
 				FBF1D4EE28927E15008C64C3 /* Application */,
 			);
 			path = "Chat-App";
@@ -214,14 +253,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF1D4DF28927A8D008C64C3 /* OnboardingViewController.swift in Sources */,
+				FBCA2166289285B3005B6722 /* NSObjectExtension.swift in Sources */,
 				FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */,
 				FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */,
+				FBCA21632892857B005B6722 /* Coordinator.swift in Sources */,
 				FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */,
 				FBCA214928927FC7005B6722 /* SigninViewController.swift in Sources */,
+				FBCA215F28928359005B6722 /* ObjectConversation.swift in Sources */,
 				FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */,
+				FBCA216128928360005B6722 /* ObjectMessage.swift in Sources */,
 				FBCA215328928094005B6722 /* ChatManager.swift in Sources */,
 				FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */,
 				FBCA215928928187005B6722 /* ConversationCell.swift in Sources */,
+				FBCA215C28928246005B6722 /* ObjectUser.swift in Sources */,
 				FBF1D4DD28927A8D008C64C3 /* SceneDelegate.swift in Sources */,
 				FBCA214728927F81005B6722 /* InitialViewController.swift in Sources */,
 				FBCA215128928056005B6722 /* FullScreenImageViewController.swift in Sources */,
