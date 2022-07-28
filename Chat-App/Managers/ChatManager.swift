@@ -14,3 +14,42 @@ final class ChatManager {
     private init() {}
     
 }
+
+//MARK: Authentication
+extension ChatManager {
+    
+    func isSignedIn() -> Bool {
+        return false
+    }
+    
+    func signUp() {
+        
+    }
+    
+    func signIn() {
+        
+    }
+}
+
+//MARK: Conversations
+extension ChatManager {
+    
+    func observeConversations() {
+        
+    }
+    
+    func observeSingleConversation() {
+        
+    }
+    
+    func sendMessage() {
+        
+    }
+}
+
+//MARK: Users
+extension ChatManager {
+    func fetchAllUsers() {
+        
+    }
+}
