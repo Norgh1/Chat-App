@@ -8,3 +8,11 @@
 import Foundation
 
 //TODO: create conversation model
+
+final class ObjectConversation {
+
+    var isUserOnline = false
+    var userTimeMessege: String?
+    
+    
+}
