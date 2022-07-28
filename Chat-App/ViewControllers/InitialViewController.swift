@@ -9,4 +9,12 @@ import UIKit
 
 final class InitialViewController: UIViewController {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if ChatManager.shared.isSignedIn() {
+            Coordinator.showConversations(from: self)
+            return
+        }
+        Coordinator.showOnboarding(from: self)
+    }
 }
