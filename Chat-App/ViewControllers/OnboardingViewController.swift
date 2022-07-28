@@ -13,6 +13,14 @@ final class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         //TODO: create UI
     }
+    
+    @IBAction func didSlide(_ sender: SliderView) {
+        if sender.isSlided {
+            //TODO show signup Coordinator.showOnboarding(from: self)
+        }
+        
+    }
+    
 
 
 }
