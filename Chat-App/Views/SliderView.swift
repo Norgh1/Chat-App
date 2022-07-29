@@ -32,6 +32,7 @@ private extension SliderView {
     func commonInit() {
         //TODO UI
         //TODO
+        print("!!!!")
         sendActions(for: .valueChanged)
         
     }

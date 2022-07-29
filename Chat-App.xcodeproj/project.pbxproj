@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
+		FB7D7E0528931D0F00BE4886 /* CornerRadiusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */; };
 		FBCA214728927F81005B6722 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214628927F81005B6722 /* InitialViewController.swift */; };
 		FBCA214928927FC7005B6722 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214828927FC7005B6722 /* SigninViewController.swift */; };
 		FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214A28927FE3005B6722 /* ConversationsViewController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
+		FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusExtension.swift; sourceTree = "<group>"; };
 		FBCA214628927F81005B6722 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBCA214828927FC7005B6722 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		FBCA214A28927FE3005B6722 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				FBCA2165289285B3005B6722 /* NSObjectExtension.swift */,
+				FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */,
+				FB4CF5E72893ABC8001540CB /* RotationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 				FBCA21632892857B005B6722 /* Coordinator.swift in Sources */,
 				FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */,
 				FBCA214928927FC7005B6722 /* SigninViewController.swift in Sources */,
+				FB7D7E0528931D0F00BE4886 /* CornerRadiusExtension.swift in Sources */,
 				FBCA215F28928359005B6722 /* ObjectConversation.swift in Sources */,
 				FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */,
 				FBCA216128928360005B6722 /* ObjectMessage.swift in Sources */,
@@ -273,6 +280,7 @@
 				FBF1D4DD28927A8D008C64C3 /* SceneDelegate.swift in Sources */,
 				FBCA214728927F81005B6722 /* InitialViewController.swift in Sources */,
 				FBCA215128928056005B6722 /* FullScreenImageViewController.swift in Sources */,
+				FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

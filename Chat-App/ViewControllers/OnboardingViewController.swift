@@ -9,26 +9,17 @@ import UIKit
 
 final class OnboardingViewController: UIViewController {
 
-    @IBOutlet weak var lionLabel: UILabel!
-    @IBOutlet weak var foxLabel: UILabel!
-    @IBOutlet weak var mouseLabel: UILabel!
-    @IBOutlet weak var catLabel: UILabel!
-    @IBOutlet weak var rhinocerosLabel: UILabel!
+   
     @IBOutlet weak var sliderView: UIView!
     @IBOutlet weak var slider: SliderView!
     
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //TODO: create UI
         
-        self.view.backgroundColor = .systemBlue
-        self.sliderView.layer.cornerRadius = 35
-        self.slider.layer.cornerRadius = 35
-        rotateEmojis()
-        setConstraintsEmojis()
+        createUI()
     }
     
     @IBAction func didSlide(_ sender: SliderView) {
@@ -37,27 +28,44 @@ final class OnboardingViewController: UIViewController {
         }
         
     }
-    
 
-//MARK: Emoji Transform
     
-    private func rotateEmojis() {
-        lionLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / -8)
-        mouseLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / -28)
-        catLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 30)
-        rhinocerosLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 7)
-    }
+    private func createUI() {
+        if let lion = view.viewWithTag(1) as? UILabel {
+            lion.text = "🦁"
+            lion.transform = CGAffineTransform(rotationAngle: CGFloat.pi - 35)
+        }
+        
+        if let cat = view.viewWithTag(2) as? UILabel {
+            cat.text = "🐱"
+            cat.transform = CGAffineTransform(rotationAngle: CGFloat.pi + 35)
+        }
 
-//MARK: Emoji Constriants
-    
-    private func setConstraintsEmojis() {
-        
-        NSLayoutConstraint.activate([
-        
-        
-        
-        ])
+        if let mouse = view.viewWithTag(3) as? UILabel {
+            mouse.text = "🐭"
+            mouse.transform = CGAffineTransform(rotationAngle: CGFloat.pi - 16)
+        }
+
+        if let foxy = view.viewWithTag(4) as? UILabel {
+            foxy.text = "🦊"
+            foxy.transform = CGAffineTransform(rotationAngle: CGFloat.pi + -3)
+        }
+
+        if let n = view.viewWithTag(5) as? UILabel {
+            n.text = "🐨"
+            n.transform = CGAffineTransform(rotationAngle: CGFloat.pi - 34)
+        }
+
+        if let xchatLabel = view.viewWithTag(6) as? UILabel {
+            xchatLabel.text = "Xchat"
+            xchatLabel.textAlignment = .center
+            xchatLabel.numberOfLines = 1
+        }
+        if let icon = view.viewWithTag(7) as? UIImageView {
+            icon.image = UIImage(named: "image")
+        }
         
     }
 }
+
 
