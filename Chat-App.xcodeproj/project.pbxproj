@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
+		FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */; };
 		FB7D7E0528931D0F00BE4886 /* CornerRadiusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */; };
 		FBCA214728927F81005B6722 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214628927F81005B6722 /* InitialViewController.swift */; };
 		FBCA214928927FC7005B6722 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214828927FC7005B6722 /* SigninViewController.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
+		FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusExtension.swift; sourceTree = "<group>"; };
 		FBCA214628927F81005B6722 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBCA214828927FC7005B6722 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				FBCA2165289285B3005B6722 /* NSObjectExtension.swift */,
 				FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */,
 				FB4CF5E72893ABC8001540CB /* RotationExtension.swift */,
+				FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF1D4DF28927A8D008C64C3 /* OnboardingViewController.swift in Sources */,
+				FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */,
 				FBCA2166289285B3005B6722 /* NSObjectExtension.swift in Sources */,
 				FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */,
 				FBCA2169289288FA005B6722 /* SliderView.swift in Sources */,
