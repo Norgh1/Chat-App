@@ -12,7 +12,7 @@
         <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialViewController" id="BYZ-38-t0r" customClass="InitialViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,10 +35,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a56-aN-6lw">
                                 <rect key="frame" x="0.0" y="492" width="414" height="404"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vr8-VU-raI" customClass="SliderView" customModule="Chat_App" customModuleProvider="target">
+                                    <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vr8-VU-raI" customClass="SliderView" customModule="Chat_App" customModuleProvider="target">
                                         <rect key="frame" x="37" y="256" width="342" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                                <real key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didSlide:" destination="rZD-lO-OY0" eventType="valueChanged" id="c6P-L6-Mpg"/>
                                         </connections>
@@ -76,7 +81,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tp4-8c-h8W">
-                                <rect key="frame" x="171" y="90" width="91" height="32.5"/>
+                                <rect key="frame" x="171" y="90" width="108" height="32.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.99301750710000003" green="1" blue="0.95604213410000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -107,7 +112,7 @@
                             <constraint firstItem="gKL-bg-FZ2" firstAttribute="leading" secondItem="0Hn-g5-IoD" secondAttribute="leading" constant="289" id="LvD-S1-Sty"/>
                             <constraint firstItem="0Hn-g5-IoD" firstAttribute="trailing" secondItem="iAe-oB-8hN" secondAttribute="trailing" constant="38" id="MLz-Va-Bwo"/>
                             <constraint firstAttribute="bottom" secondItem="a56-aN-6lw" secondAttribute="bottom" id="MQX-H1-zZp"/>
-                            <constraint firstItem="0Hn-g5-IoD" firstAttribute="trailing" secondItem="tp4-8c-h8W" secondAttribute="trailing" constant="152" id="MfQ-Ke-LLK"/>
+                            <constraint firstItem="0Hn-g5-IoD" firstAttribute="trailing" secondItem="tp4-8c-h8W" secondAttribute="trailing" constant="135" id="MfQ-Ke-LLK"/>
                             <constraint firstItem="yRX-1a-SAl" firstAttribute="leading" secondItem="0Hn-g5-IoD" secondAttribute="leading" constant="150" id="N8w-MM-OYi"/>
                             <constraint firstItem="Om4-vj-q0Z" firstAttribute="top" secondItem="0Hn-g5-IoD" secondAttribute="top" constant="86" id="PPc-cq-fe6"/>
                             <constraint firstItem="iAe-oB-8hN" firstAttribute="top" secondItem="0Hn-g5-IoD" secondAttribute="top" constant="128" id="R9a-S7-Jp2"/>
@@ -123,10 +128,6 @@
                             <constraint firstItem="a56-aN-6lw" firstAttribute="top" secondItem="0Hn-g5-IoD" secondAttribute="top" constant="448" id="znt-IJ-eRG"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="slider" destination="vr8-VU-raI" id="gLu-q3-edp"/>
-                        <outlet property="sliderView" destination="a56-aN-6lw" id="858-0d-uEJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEw-gZ-FwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

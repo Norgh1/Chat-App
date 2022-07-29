@@ -8,24 +8,17 @@
 import UIKit
 
 final class OnboardingViewController: UIViewController {
-
-   
-    @IBOutlet weak var sliderView: UIView!
-    @IBOutlet weak var slider: SliderView!
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //TODO: create UI
-        
         createUI()
     }
     
     @IBAction func didSlide(_ sender: SliderView) {
         if sender.isSlided {
             Coordinator.showOnboarding(from: self)
-        }
+        } 
         
     }
 
@@ -64,7 +57,10 @@ final class OnboardingViewController: UIViewController {
         if let icon = view.viewWithTag(7) as? UIImageView {
             icon.image = UIImage(named: "image")
         }
-        
+        if let slider = view.viewWithTag(8) as? SliderView {
+            print("This is an my slider :\(slider)")
+            //view.addSubview(slider)
+        }
     }
 }
 

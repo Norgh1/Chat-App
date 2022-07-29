@@ -30,8 +30,7 @@ final class SliderView: UIControl {
 //MARK: Private methods
 private extension SliderView {
     func commonInit() {
-        //TODO UI
-        //TODO
+        //TODO UI 
         print("!!!!")
         sendActions(for: .valueChanged)
         

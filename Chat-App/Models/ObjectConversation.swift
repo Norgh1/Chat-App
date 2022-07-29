@@ -11,8 +11,9 @@ import Foundation
 
 final class ObjectConversation {
 
-    var isUserOnline = false
+    var isActive = false
     var userTimeMessege: String?
-    
-    
+    var profileImageURL:String?
+    var isMicrofonActive = false
+
 }

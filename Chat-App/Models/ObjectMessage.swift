@@ -14,6 +14,5 @@ final class ObjectMessage {
     var sendMessege: String?
     var reciveMessege: String?
     var willAttachedFiles = false
-    var isMicrofonActive = false
     
 }
