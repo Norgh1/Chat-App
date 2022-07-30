@@ -32,6 +32,7 @@ extension ChatManager {
 }
 
 //MARK: Conversations
+
 extension ChatManager {
     
     func observeConversations() {
@@ -48,6 +49,7 @@ extension ChatManager {
 }
 
 //MARK: Users
+
 extension ChatManager {
     func fetchAllUsers() {
         

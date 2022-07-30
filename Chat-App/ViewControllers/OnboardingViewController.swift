@@ -25,6 +25,7 @@ final class OnboardingViewController: UIViewController {
 	private func configureViews() {
 		let rotatingValues = [CGFloat.pi - 35, CGFloat.pi + 35, CGFloat.pi - 16, CGFloat.pi + -3, CGFloat.pi - 34]
 		rotatingValues.enumerated().forEach({view.viewWithTag($0.offset + 1)?.transform = CGAffineTransform(rotationAngle: $0.element)})
+		
 	}
 }
 
