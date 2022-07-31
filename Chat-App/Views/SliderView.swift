@@ -6,6 +6,7 @@
 	//
 
 import UIKit
+import QuartzCore
 
 final class SliderView: UIControl {
 	
@@ -25,40 +26,41 @@ final class SliderView: UIControl {
 		commonInit()
 	}
 	
-	@objc func swipeRight(recognizer: UIPanGestureRecognizer) {
-		if recognizer.state == .changed {
-			print("!!!")
+	@objc func swipeGesture(recognizer: UIPanGestureRecognizer) {
+		if recognizer.state == .ended {
+			print("Recognizer hes ended")
 		}
 	}
 	
-	@objc func swipeRightTwo(recognize: UISwipeGestureRecognizer) {
-		if recognize.state == .cancelled {
-			print("print")
-		}
-	}
-	
+		
 }
 
 	//MARK: Private methods
 private extension SliderView {
 	func commonInit() {
-		let button = UIButton()
 		
-
 			//TODO UI
-
 		
+		let textFld = UITextField()
+		textFld.translatesAutoresizingMaskIntoConstraints = false
+		textFld.placeholder = "Swipe to start..."
+		
+
+		let button = UIButton()
 		button.cornerRadius = 10
-		button.contentMode = .top
 		button.backgroundColor = .white
 		button.isUserInteractionEnabled = true
-		button.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(swipeRight(recognizer:))))
+		button.layer.borderColor = UIColor.black.cgColor
+		button.layer.borderWidth = 3.0
 		
+		//MARK: Gesture recognizer
 		
-	
-		
+		let pan = UIPanGestureRecognizer(target: self, action: #selector(swipeGesture(recognizer:)))
+		button.addGestureRecognizer(pan)
 		addSubview(button)
-		button.pinEdgesToSuperView(leading: 20, trailing: nil, top: 20, bottom: -20)
+		addSubview(textFld)
+		button.pinEdgesToSuperView(leading: 30, trailing: nil, top: 20, bottom: -20)
+		button.sendActions(for: .valueChanged)
 //		self.cornerRadious
 //		placeholder label
 //		rounded view
@@ -66,6 +68,6 @@ private extension SliderView {
 //		gesture panRecognizer
 //		horizontal constraint value
 //		gesure if ended check if finished sliding
-		button.sendActions(for: .valueChanged)
+		
 	}
 }

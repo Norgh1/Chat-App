@@ -75,9 +75,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vr8-VU-raI" customClass="SliderView" customModule="Chat_App" customModuleProvider="target">
-                                        <rect key="frame" x="64" y="266" width="280" height="71"/>
+                                        <rect key="frame" x="65" y="270" width="280" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <gestureRecognizers/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="35"/>
