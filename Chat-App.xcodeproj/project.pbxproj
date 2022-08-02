@@ -77,8 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				FBCA214628927F81005B6722 /* InitialViewController.swift */,
-				FBF1D4DE28927A8D008C64C3 /* OnboardingViewController.swift */,
 				FBCA214828927FC7005B6722 /* SigninViewController.swift */,
+				FBF1D4DE28927A8D008C64C3 /* OnboardingViewController.swift */,
 				FBCA214A28927FE3005B6722 /* ConversationsViewController.swift */,
 				FBCA214C28928002005B6722 /* ContactsViewController.swift */,
 				FBCA214E2892801F005B6722 /* ChatViewController.swift */,

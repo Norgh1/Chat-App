@@ -32,6 +32,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDN-eg-KOb">
+                                <rect key="frame" x="213" y="280" width="200" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUt-98-uRa">
                                 <rect key="frame" x="0.0" y="862" width="414" height="89.5"/>
                             </view>
@@ -91,12 +95,21 @@
                                             <action selector="didSlide:" destination="rZD-lO-OY0" eventType="valueChanged" id="c6P-L6-Mpg"/>
                                         </connections>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat using avatar em emoji gives a different impression, dare to try it?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-Dz-fPp">
+                                        <rect key="frame" x="35" y="183" width="344" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="D8f-BK-afc" firstAttribute="top" secondItem="a56-aN-6lw" secondAttribute="top" constant="20" id="8eJ-si-lo3"/>
                                     <constraint firstAttribute="trailing" secondItem="D8f-BK-afc" secondAttribute="trailing" constant="7" id="910-F9-496"/>
                                     <constraint firstAttribute="bottom" secondItem="D8f-BK-afc" secondAttribute="bottom" constant="261" id="BT4-o3-qEr"/>
+                                    <constraint firstItem="8Ye-Dz-fPp" firstAttribute="centerY" secondItem="a56-aN-6lw" secondAttribute="centerY" id="RgJ-vv-ur4"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ye-Dz-fPp" secondAttribute="trailing" constant="35" id="dXV-ex-A1C"/>
+                                    <constraint firstItem="8Ye-Dz-fPp" firstAttribute="leading" secondItem="a56-aN-6lw" secondAttribute="leading" constant="35" id="hSl-SU-k9K"/>
                                     <constraint firstItem="D8f-BK-afc" firstAttribute="leading" secondItem="a56-aN-6lw" secondAttribute="leading" constant="7" id="iqh-cs-GKo"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -187,6 +200,9 @@
         <namedColor name="textColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

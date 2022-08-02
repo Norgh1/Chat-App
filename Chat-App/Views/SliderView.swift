@@ -6,14 +6,16 @@
 	//
 
 import UIKit
-import QuartzCore
 
 final class SliderView: UIControl {
 	
 		//MARK: Public properties
-	private(set) var isSlided = false
+	private(set) var isSlided = true
 	
 		//MARK: Private properties
+	
+	//private var button
+	
 	
 		//MARK: Inits
 	required init?(coder: NSCoder) {
@@ -26,41 +28,57 @@ final class SliderView: UIControl {
 		commonInit()
 	}
 	
-	@objc func swipeGesture(recognizer: UIPanGestureRecognizer) {
+	@objc func swipe( _ recognizer: UIPanGestureRecognizer) {
 		if recognizer.state == .ended {
-			print("Recognizer hes ended")
+			print("Swiped")
 		}
 	}
 	
+
 		
 }
+
 
 	//MARK: Private methods
 private extension SliderView {
 	func commonInit() {
-		
 			//TODO UI
-		
-		let textFld = UITextField()
-		textFld.translatesAutoresizingMaskIntoConstraints = false
-		textFld.placeholder = "Swipe to start..."
-		
+	
+		//MARK: PlaceHolder
 
+			let textFld = UITextField()
+			textFld.translatesAutoresizingMaskIntoConstraints = false
+			let placeHolderString:String = "Swipe to start..."
+			textFld.attributedPlaceholder = NSAttributedString(string: placeHolderString,
+																												 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+			addSubview(textFld)
+
+
+		//MARK: Button
+		
 		let button = UIButton()
 		button.cornerRadius = 10
 		button.backgroundColor = .white
 		button.isUserInteractionEnabled = true
-		button.layer.borderColor = UIColor.black.cgColor
-		button.layer.borderWidth = 3.0
+		button.layer.borderColor = UIColor.systemGray.cgColor
+		button.layer.borderWidth = 1.0
+		button.clipsToBounds = true
+		
 		
 		//MARK: Gesture recognizer
-		
-		let pan = UIPanGestureRecognizer(target: self, action: #selector(swipeGesture(recognizer:)))
+
+		let pan = UIPanGestureRecognizer(target: self, action: #selector(swipe(_:)))
 		button.addGestureRecognizer(pan)
 		addSubview(button)
 		addSubview(textFld)
-		button.pinEdgesToSuperView(leading: 30, trailing: nil, top: 20, bottom: -20)
+		
+		
+		
+		textFld.pinEdgesToSuperView(leading: 90, trailing: nil, top: 30 , bottom: -30)
+		button.pinEdgesToSuperView(leading: 15, trailing: nil, top: 15 , bottom: -20)
 		button.sendActions(for: .valueChanged)
+		
+		
 //		self.cornerRadious
 //		placeholder label
 //		rounded view
@@ -71,3 +89,5 @@ private extension SliderView {
 		
 	}
 }
+
+
