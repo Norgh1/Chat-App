@@ -9,15 +9,16 @@ import UIKit
 
 final class SliderView: UIControl {
 	
-		//MARK: Public properties
+	//MARK: Public properties
 	private(set) var isSlided = true
+	public var buttonInset: CGFloat = 10
 	
-		//MARK: Private properties
+	//MARK: Private properties
+	private let buttonView = UIImageView()
+	private var leadingConstraint: NSLayoutConstraint?
+	private var maxSize: CGFloat { return bounds.width - buttonInset - buttonInset - buttonView.bounds.width }
 	
-	//private var button
-	
-	
-		//MARK: Inits
+	//MARK: Inits
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
 		commonInit()
@@ -28,66 +29,58 @@ final class SliderView: UIControl {
 		commonInit()
 	}
 	
-	@objc func swipe( _ recognizer: UIPanGestureRecognizer) {
-		if recognizer.state == .ended {
-			print("Swiped")
-		}
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		layer.cornerRadius = bounds.height / 2
+		buttonView.layer.cornerRadius = (bounds.height - buttonInset - buttonInset) / 2
 	}
-	
-
-		
 }
-
 
 	//MARK: Private methods
 private extension SliderView {
 	func commonInit() {
-			//TODO UI
+		backgroundColor = .systemBlue
+		clipsToBounds = true
+		//Placeholder configfuration
+		let label = UILabel()
+		label.text = "Swipe to start..."
+		label.font = .systemFont(ofSize: 20, weight: .bold)
+		label.adjustsFontSizeToFitWidth = true
+		label.textAlignment = .center
+		label.textColor = .white
+		label.alpha = 0.8
+		addSubview(label)
+		label.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
+		
+		//Button configfuration
+		buttonView.backgroundColor = .white
+		buttonView.tintColor = .systemBlue
+		buttonView.image = UIImage(systemName: "chevron.forward")
+		addSubview(buttonView)
+		buttonView.pinEdgesToSuperView(leading: nil, trailing: nil, top: buttonInset, bottom: -buttonInset)
+		leadingConstraint = NSLayoutConstraint.init(item: self, attribute: .left, relatedBy: .equal, toItem: buttonView, attribute: .left, multiplier: 1.0, constant: -buttonInset)
+		leadingConstraint?.isActive = true
+		buttonView.heightAnchor.constraint(equalTo: buttonView.widthAnchor).isActive = true
+		buttonView.isUserInteractionEnabled = true
+		let panGesture = UIPanGestureRecognizer(target: self, action: #selector(buttonSwiped(_:)))
+		buttonView.addGestureRecognizer(panGesture)
+	}
 	
-		//MARK: PlaceHolder
-
-			let textFld = UITextField()
-			textFld.translatesAutoresizingMaskIntoConstraints = false
-			let placeHolderString:String = "Swipe to start..."
-			textFld.attributedPlaceholder = NSAttributedString(string: placeHolderString,
-																												 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-			addSubview(textFld)
-
-
-		//MARK: Button
-		
-		let button = UIButton()
-		button.cornerRadius = 10
-		button.backgroundColor = .white
-		button.isUserInteractionEnabled = true
-		button.layer.borderColor = UIColor.systemGray.cgColor
-		button.layer.borderWidth = 1.0
-		button.clipsToBounds = true
-		
-		
-		//MARK: Gesture recognizer
-
-		let pan = UIPanGestureRecognizer(target: self, action: #selector(swipe(_:)))
-		button.addGestureRecognizer(pan)
-		addSubview(button)
-		addSubview(textFld)
-		
-		
-		
-		textFld.pinEdgesToSuperView(leading: 90, trailing: nil, top: 30 , bottom: -30)
-		button.pinEdgesToSuperView(leading: 15, trailing: nil, top: 15 , bottom: -20)
-		button.sendActions(for: .valueChanged)
-		
-		
-//		self.cornerRadious
-//		placeholder label
-//		rounded view
-//		horizontal constraint
-//		gesture panRecognizer
-//		horizontal constraint value
-//		gesure if ended check if finished sliding
-		
+	@objc func buttonSwiped(_ recognizer: UIPanGestureRecognizer) {
+		switch recognizer.state {
+			case .changed:
+				let translation = max(min(recognizer.translation(in: self).x, maxSize), buttonInset)
+				leadingConstraint?.constant = -translation
+				layoutIfNeeded()
+			case .ended, .cancelled, .failed:
+				if abs(leadingConstraint?.constant ?? 0) == maxSize {
+					sendActions(for: .valueChanged)
+				}
+				leadingConstraint?.constant = -buttonInset
+				UIView.animate(withDuration: 0.3) {
+					self.layoutIfNeeded()
+				}
+			default: break
+		}
 	}
 }
-
-
