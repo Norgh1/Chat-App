@@ -27,6 +27,23 @@ extension UIView {
 			bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: bottom).isActive = true
 		}
 	}
+	
+	func fadeIn(duration: TimeInterval = 0.3, completion: ((Bool) -> Void)? = nil) {
+		self.alpha = 0
+		isHidden = false
+		UIView.animate(withDuration: duration, animations: {
+			self.alpha = 1
+		}, completion: completion)
+	}
+	
+	func fadeOut(duration: TimeInterval = 0.3, completion: ((Bool) -> Void)? = nil) {
+		UIView.animate(withDuration: duration, animations: {
+			self.alpha = 0
+		}) { status in
+			self.isHidden = true
+			completion?(status)
+		}
+	}
 }
 
 

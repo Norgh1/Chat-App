@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
+		FB26697428996D0200F8BA7F /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697328996D0200F8BA7F /* MainButton.swift */; };
 		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
+		FB767E79289965610005164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB767E78289965610005164B /* Main.storyboard */; };
 		FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */; };
 		FB7D7E0528931D0F00BE4886 /* CornerRadiusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */; };
 		FBCA214728927F81005B6722 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214628927F81005B6722 /* InitialViewController.swift */; };
@@ -28,13 +31,15 @@
 		FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DA28927A8D008C64C3 /* AppDelegate.swift */; };
 		FBF1D4DD28927A8D008C64C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DC28927A8D008C64C3 /* SceneDelegate.swift */; };
 		FBF1D4DF28927A8D008C64C3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DE28927A8D008C64C3 /* OnboardingViewController.swift */; };
-		FBF1D4E228927A8D008C64C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF1D4E028927A8D008C64C3 /* Main.storyboard */; };
 		FBF1D4E428927A8E008C64C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF1D4E328927A8E008C64C3 /* Assets.xcassets */; };
 		FBF1D4E728927A8E008C64C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF1D4E528927A8E008C64C3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
+		FB26697328996D0200F8BA7F /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
+		FB767E78289965610005164B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusExtension.swift; sourceTree = "<group>"; };
 		FBCA214628927F81005B6722 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +61,6 @@
 		FBF1D4DA28927A8D008C64C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF1D4DC28927A8D008C64C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FBF1D4DE28927A8D008C64C3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		FBF1D4E128927A8D008C64C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBF1D4E328927A8E008C64C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBF1D4E628927A8E008C64C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBF1D4E828927A8E008C64C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +94,7 @@
 		FBCA214528927EC0005B6722 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				FBF1D4E028927A8D008C64C3 /* Main.storyboard */,
+				FB767E78289965610005164B /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -116,6 +120,8 @@
 			children = (
 				FBCA215828928187005B6722 /* ConversationCell.swift */,
 				FBCA2168289288FA005B6722 /* SliderView.swift */,
+				FB26697128996CCB00F8BA7F /* SegmentedView.swift */,
+				FB26697328996D0200F8BA7F /* MainButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,9 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB767E79289965610005164B /* Main.storyboard in Resources */,
 				FBF1D4E728927A8E008C64C3 /* LaunchScreen.storyboard in Resources */,
 				FBF1D4E428927A8E008C64C3 /* Assets.xcassets in Resources */,
-				FBF1D4E228927A8D008C64C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +274,7 @@
 				FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */,
 				FBCA2166289285B3005B6722 /* NSObjectExtension.swift in Sources */,
 				FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */,
+				FB26697428996D0200F8BA7F /* MainButton.swift in Sources */,
 				FBCA2169289288FA005B6722 /* SliderView.swift in Sources */,
 				FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */,
 				FBCA21632892857B005B6722 /* Coordinator.swift in Sources */,
@@ -277,6 +284,7 @@
 				FBCA215F28928359005B6722 /* ObjectConversation.swift in Sources */,
 				FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */,
 				FBCA216128928360005B6722 /* ObjectMessage.swift in Sources */,
+				FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */,
 				FBCA215328928094005B6722 /* ChatManager.swift in Sources */,
 				FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */,
 				FBCA215928928187005B6722 /* ConversationCell.swift in Sources */,
@@ -291,14 +299,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FBF1D4E028927A8D008C64C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FBF1D4E128927A8D008C64C3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FBF1D4E528927A8E008C64C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

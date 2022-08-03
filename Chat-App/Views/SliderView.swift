@@ -41,6 +41,8 @@ private extension SliderView {
 	func commonInit() {
 		backgroundColor = .systemBlue
 		clipsToBounds = true
+		
+		
 		//Placeholder configfuration
 		let label = UILabel()
 		label.text = "Swipe to start..."
@@ -49,8 +51,11 @@ private extension SliderView {
 		label.textAlignment = .center
 		label.textColor = .white
 		label.alpha = 0.8
+		
 		addSubview(label)
 		label.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
+		
+
 		
 		//Button configfuration
 		buttonView.backgroundColor = .white
@@ -58,7 +63,7 @@ private extension SliderView {
 		buttonView.image = UIImage(systemName: "chevron.forward")
 		addSubview(buttonView)
 		buttonView.pinEdgesToSuperView(leading: nil, trailing: nil, top: buttonInset, bottom: -buttonInset)
-		leadingConstraint = NSLayoutConstraint.init(item: self, attribute: .left, relatedBy: .equal, toItem: buttonView, attribute: .left, multiplier: 1.0, constant: -buttonInset)
+		leadingConstraint = NSLayoutConstraint(item: self, attribute: .left, relatedBy: .equal, toItem: buttonView, attribute: .left, multiplier: 1.0, constant: -buttonInset)
 		leadingConstraint?.isActive = true
 		buttonView.heightAnchor.constraint(equalTo: buttonView.widthAnchor).isActive = true
 		buttonView.isUserInteractionEnabled = true
