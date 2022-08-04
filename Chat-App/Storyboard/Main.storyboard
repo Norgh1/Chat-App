@@ -215,6 +215,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEw-gZ-FwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4Ol-aB-dtu" userLabel="Exit" sceneMemberID="exit"/>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K98-EK-N4p">
                     <rect key="frame" x="0.0" y="0.0" width="364" height="684"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -239,8 +240,8 @@
                                         <action selector="segmentPressed:" destination="rZD-lO-OY0" eventType="valueChanged" id="wNf-Yw-Ady"/>
                                     </connections>
                                 </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="nhl-F9-4c7">
-                                    <rect key="frame" x="10" y="100" width="284" height="289"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="nhl-F9-4c7">
+                                    <rect key="frame" x="10" y="100" width="284" height="354"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text fld" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxH-DH-Rzj">
                                             <rect key="frame" x="0.0" y="0.0" width="284" height="34"/>
@@ -248,31 +249,32 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text fld two" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNC-13-ZC0">
-                                            <rect key="frame" x="0.0" y="55" width="284" height="34"/>
+                                            <rect key="frame" x="0.0" y="68" width="284" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXt-Lq-q5x">
-                                            <rect key="frame" x="0.0" y="110" width="284" height="34"/>
+                                            <rect key="frame" x="0.0" y="136" width="284" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ars-Y9-sMP">
-                                            <rect key="frame" x="0.0" y="165" width="284" height="34"/>
+                                            <rect key="frame" x="0.0" y="204" width="284" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-kK-gCV">
-                                            <rect key="frame" x="0.0" y="220" width="284" height="34"/>
+                                            <rect key="frame" x="0.0" y="272" width="284" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-bR-YaS" customClass="MainButton" customModule="Chat_App" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="275" width="284" height="14"/>
+                                            <rect key="frame" x="0.0" y="340" width="284" height="14"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="rZD-lO-OY0" eventType="touchUpInside" id="w8N-NN-lNf"/>
+                                                <action selector="buttonTapped:" destination="4Ol-aB-dtu" eventType="touchUpInside" id="OEG-8E-m9K"/>
                                             </connections>
                                         </button>
                                     </subviews>
