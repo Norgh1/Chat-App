@@ -54,12 +54,12 @@ private extension OnboardingViewController {
 	
 	func customization() {
 		//Emojies
-		let rotatingValues = [CGFloat.pi - 4, CGFloat.pi - 3, CGFloat.pi - 3	, CGFloat.pi + -3, CGFloat.pi - 3]
+		let rotatingValues = [CGFloat.pi - 4, CGFloat.pi - 3, CGFloat.pi - 3, CGFloat.pi - 3, CGFloat.pi - 3]
 		rotatingValues.enumerated().forEach({view.viewWithTag($0.offset + 1)?.transform = CGAffineTransform(rotationAngle: $0.element)})
 		//Auth View
 		view.addSubview(authView)
 		authView.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
-		authView.isHidden = false
+		authView.isHidden = true
 		segmentedView.items = "SignUp SignIn"
 	}
 }

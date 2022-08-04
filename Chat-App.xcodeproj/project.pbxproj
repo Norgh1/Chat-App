@@ -10,7 +10,7 @@
 		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
 		FB26697428996D0200F8BA7F /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697328996D0200F8BA7F /* MainButton.swift */; };
 		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
-		FB5B0A14289AB6C0002CA342 /* NSStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B0A13289AB6C0002CA342 /* NSStringExtension.swift */; };
+		FB5B0A14289AB6C0002CA342 /* NSAtrributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */; };
 		FB767E79289965610005164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB767E78289965610005164B /* Main.storyboard */; };
 		FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */; };
 		FB7D0112289AC5FD008936CD /* ResizableUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D0111289AC5FD008936CD /* ResizableUICollectionView.swift */; };
@@ -41,7 +41,7 @@
 		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		FB26697328996D0200F8BA7F /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
-		FB5B0A13289AB6C0002CA342 /* NSStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringExtension.swift; sourceTree = "<group>"; };
+		FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAtrributedStringExtension.swift; sourceTree = "<group>"; };
 		FB767E78289965610005164B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		FB7D0111289AC5FD008936CD /* ResizableUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableUICollectionView.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 				FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */,
 				FB4CF5E72893ABC8001540CB /* RotationExtension.swift */,
 				FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */,
-				FB5B0A13289AB6C0002CA342 /* NSStringExtension.swift */,
+				FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 				FBCA214728927F81005B6722 /* InitialViewController.swift in Sources */,
 				FBCA215128928056005B6722 /* FullScreenImageViewController.swift in Sources */,
 				FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */,
-				FB5B0A14289AB6C0002CA342 /* NSStringExtension.swift in Sources */,
+				FB5B0A14289AB6C0002CA342 /* NSAtrributedStringExtension.swift in Sources */,
 				FB7D0112289AC5FD008936CD /* ResizableUICollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

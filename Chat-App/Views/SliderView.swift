@@ -14,7 +14,7 @@ final class SliderView: UIControl {
 	public var buttonInset: CGFloat = 10
 	
 	//MARK: Private properties
-	private let buttonView = UIImageView()
+	private let buttonView = UIView()
 	private var leadingConstraint: NSLayoutConstraint?
 	private var maxSize: CGFloat { return bounds.width - buttonInset - buttonInset - buttonView.bounds.width }
 	
@@ -55,12 +55,8 @@ private extension SliderView {
 		addSubview(label)
 		label.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
 		
-
-		
 		//Button configfuration
 		buttonView.backgroundColor = .white
-		buttonView.tintColor = .systemBlue
-		buttonView.image = UIImage(systemName: "chevron.forward")
 		addSubview(buttonView)
 		buttonView.pinEdgesToSuperView(leading: nil, trailing: nil, top: buttonInset, bottom: -buttonInset)
 		leadingConstraint = NSLayoutConstraint(item: self, attribute: .left, relatedBy: .equal, toItem: buttonView, attribute: .left, multiplier: 1.0, constant: -buttonInset)
@@ -69,6 +65,11 @@ private extension SliderView {
 		buttonView.isUserInteractionEnabled = true
 		let panGesture = UIPanGestureRecognizer(target: self, action: #selector(buttonSwiped(_:)))
 		buttonView.addGestureRecognizer(panGesture)
+		
+		let imageIconView = UIImageView(image: UIImage(systemName: "chevron.forward"))
+		imageIconView.contentMode = .scaleAspectFit
+		buttonView.addSubview(imageIconView)
+		imageIconView.pinEdgesToSuperView(leading: 8, trailing: -8, top: 8, bottom: -8)
 	}
 	
 	@objc func buttonSwiped(_ recognizer: UIPanGestureRecognizer) {
