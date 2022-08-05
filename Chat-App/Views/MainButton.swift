@@ -9,6 +9,20 @@ import UIKit
 
 final class MainButton: UIButton {
 	
+	//MARK: Public properties
+	var isAnimating = false {
+		didSet { updateUI() }
+	}
+	
+	//MARK: Private properties
+	private lazy var spinner: UIActivityIndicatorView = {
+		let indicator = UIActivityIndicatorView()
+		indicator.hidesWhenStopped = true
+		indicator.style = .large
+		indicator.color = .white
+		self.addSubview(indicator)
+		return indicator
+	}()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -19,58 +33,39 @@ final class MainButton: UIButton {
 		super.init(coder: coder)
 		commonInit()
 	}
-	
 
 	override func layoutSubviews() {
 		super.layoutSubviews()
+		spinner.center = CGPoint(x: frame.size.width  / 2, y: frame.size.height / 2)
 	}
 	
-	// shadow
-	// spinner animation
-	// change mode either text or loading
-	
-	
-	
+	override func sendAction(_ action: Selector, to target: Any?, for event: UIEvent?) {
+		guard !isAnimating else { return }
+		super.sendAction(action, to: target, for: event)
+	}
 }
 
-
+//MARK: Private functions
 private extension MainButton {
 	func commonInit() {
+	
+		let backgroundView = UIView()
+		addSubview(backgroundView)
+		backgroundView.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
+		backgroundView.backgroundColor = .systemBlue
+		backgroundView.clipsToBounds = true
+		backgroundView.cornerRadius = 10
 		
-		
-		
-		// Button
-		let button = UIButton()
-		button.backgroundColor = .systemBlue
-		button.setTitle("Button", for: .normal)
-		button.titleLabel?.font =  UIFont(name: "Apple SD Gothic Neo Heavy", size: 20)
-		button.titleLabel?.textColor = .black
-		button.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.25)
-		//button.layer.masksToBounds = false
-		
-		
-		//shadow
-		button.layer.shadowOffset = CGSize(width: 12, height: 23)
-		button.layer.shadowColor = UIColor(displayP3Red: 34, green: 34, blue: 34, alpha: 34).cgColor
-		addSubview(button)
-		button.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
-		
+		tintColor = .white
+		layer.shadowColor = UIColor.systemBlue.cgColor
+		layer.shadowRadius = 10
+		layer.shadowOpacity = 0.3
+		updateUI()
 	}
 	
-	// indicator view
-	private func showActivityIndicator() {
-		let activityView = UIActivityIndicatorView(style: .medium)
-		activityView.center = self.center
-		addSubview(activityView)
-		activityView.pinEdgesToSuperView(leading: 20, trailing: 0, top: -0, bottom: -0)
-		activityView.startAnimating()
+	func updateUI() {
+		isAnimating ? spinner.startAnimating() : spinner.stopAnimating()
+		titleLabel?.isHidden = isAnimating
 	}
-	
-//	func hideActivityIndicator(){
-//		if (activityView != nil){
-//			activityView?.stopAnimating()
-//		}
-//	}
-
 }
 
