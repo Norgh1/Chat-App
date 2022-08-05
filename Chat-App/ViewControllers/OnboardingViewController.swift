@@ -9,27 +9,18 @@ import UIKit
 
 final class OnboardingViewController: UIViewController {
 	
-	@IBOutlet weak var segmentedView: SegmetedView!
-	
-	@IBAction func segmentPressed(_ sender: SegmetedView) {
-		print(sender.selectedIndex)
-	}
-	
-	
-	@IBAction func buttonPressed(_ sender: Any) {
-		textFld.isHidden.toggle()
-	}
-	
 	//MARK: IBOutlets
 	@IBOutlet var authView: UIView!
-	@IBOutlet var textFld: UITextField!
-	@IBOutlet var textFldTwo: UITextField!
+	@IBOutlet weak var segmentedView: SegmetedView!
+	@IBOutlet weak var nameTextField: UITextField!
+	@IBOutlet weak var lastNameTextField: UITextField!
+	@IBOutlet weak var emailTextField: UITextField!
+	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet weak var authButton: MainButton!
 	
-	//MARK: LifeCycle
+		//MARK: LifeCycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		textFld.delegate = self
-		textFldTwo.delegate = self
 		customization()
 	}
 }
@@ -46,11 +37,18 @@ private extension OnboardingViewController {
 		authView.fadeOut()
 	}
 	
+	@IBAction func segmentPressed(_ sender: SegmetedView) {
+		print(sender.selectedIndex)
+	}
+	
+	@IBAction func AuthPressed(_ sender: MainButton) {
+		sender.isAnimating.toggle()
+		Coordinator.showConversations(from: self)
+	}
 }
 
 //MARK: Private methods
 private extension OnboardingViewController {
-	
 	
 	func customization() {
 		//Emojies
@@ -60,7 +58,7 @@ private extension OnboardingViewController {
 		view.addSubview(authView)
 		authView.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
 		authView.isHidden = true
-		segmentedView.items = "SignUp SignIn"
+		segmentedView.items = "SignUp SignIn LogOut"
 	}
 }
 
@@ -68,18 +66,15 @@ private extension OnboardingViewController {
 extension OnboardingViewController: UITextFieldDelegate {
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
-		print("Text fls did end editing, delegation works!")
+		switch textField {
+			case textField where textField == nameTextField:
+				lastNameTextField.becomeFirstResponder()
+			case textField where textField == lastNameTextField:
+				emailTextField.becomeFirstResponder()
+			case textField where textField == emailTextField:
+				passwordTextField.becomeFirstResponder()
+			default: resignFirstResponder()
+		}
 		return true
 	}
-	
-	
-	func textFieldDidBeginEditing(_ textField: UITextField) {
-		print("Text filed is Editing!")
-	}
-	
-	func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-		print("Did end Editing!")
-	}
-	
 }
