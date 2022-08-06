@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+final class UserDefaultsService {
+	
+	
+	
+}
+
+//MARK: Model
+extension UserDefaults {
+	enum Key: String {
+		case isSignedin
+	}
+}
+
+
+
