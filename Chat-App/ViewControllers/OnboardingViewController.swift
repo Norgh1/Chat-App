@@ -39,6 +39,21 @@ private extension OnboardingViewController {
 	
 	@IBAction func segmentPressed(_ sender: SegmetedView) {
 		print(sender.selectedIndex)
+		switch sender.selectedIndex {
+			case 0:
+				authButton.setTitle("Register", for: .normal)
+				nameTextField.isHidden = false
+				lastNameTextField.isHidden = false
+				passwordTextField.isSecureTextEntry = true
+				print("case 0")
+			case 1:
+				authButton.setTitle("Sign IN", for: .normal)
+				nameTextField.isHidden = true
+				lastNameTextField.isHidden = true
+				passwordTextField.isSecureTextEntry = true
+				print("case 1")
+			default:break
+		}
 	}
 	
 	@IBAction func AuthPressed(_ sender: MainButton) {
@@ -58,8 +73,9 @@ private extension OnboardingViewController {
 		view.addSubview(authView)
 		authView.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
 		authView.isHidden = true
-		segmentedView.items = "SignUp SignIn LogOut"
+		segmentedView.items = "SignUp SignIn"
 	}
+	
 }
 
 //MARK: Textfield delegates
