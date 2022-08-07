@@ -17,16 +17,22 @@ final class OnboardingViewController: UIViewController {
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var authButton: MainButton!
+
 	
 		//MARK: LifeCycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		customization()
 	}
+	@IBAction func buttonPressed(_ sender: CutomButton) {
+			sender.isAnimating.toggle()
+			Coordinator.showConversations(from: self)
+	}
 }
 
 //MARK: IBActions
 private extension OnboardingViewController {
+	
 	@IBAction func didSlide(_ sender: SliderView) {
 		if sender.isSlided {
 			authView.fadeIn()
@@ -41,24 +47,19 @@ private extension OnboardingViewController {
 		print(sender.selectedIndex)
 		switch sender.selectedIndex {
 			case 0:
-				authButton.setTitle("Register", for: .normal)
+				authButton.setTitle("Registration", for: .normal)
 				nameTextField.isHidden = false
 				lastNameTextField.isHidden = false
 				passwordTextField.isSecureTextEntry = true
 				print("case 0")
 			case 1:
-				authButton.setTitle("Sign IN", for: .normal)
+				authButton.setTitle("Sign In", for: .normal)
 				nameTextField.isHidden = true
 				lastNameTextField.isHidden = true
 				passwordTextField.isSecureTextEntry = true
 				print("case 1")
 			default:break
 		}
-	}
-	
-	@IBAction func AuthPressed(_ sender: MainButton) {
-		sender.isAnimating.toggle()
-		Coordinator.showConversations(from: self)
 	}
 }
 
@@ -75,6 +76,7 @@ private extension OnboardingViewController {
 		authView.isHidden = true
 		segmentedView.items = "SignUp SignIn"
 	}
+
 	
 }
 

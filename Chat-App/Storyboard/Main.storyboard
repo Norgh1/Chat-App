@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZD-lO-OY0">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="98"/>
+            <point key="canvasLocation" x="4680.8000000000002" y="-11.083743842364532"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="mO7-wc-IiV">
@@ -208,7 +209,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="authButton" destination="dQk-Lt-pOL" id="zUZ-zg-QXL"/>
+                        <outlet property="authButton" destination="dQk-Lt-pOL" id="Hxl-wp-4Pz"/>
                         <outlet property="authView" destination="K98-EK-N4p" id="swH-be-WTg"/>
                         <outlet property="emailTextField" destination="HXt-Lq-q5x" id="Gys-FJ-A7D"/>
                         <outlet property="lastNameTextField" destination="HNC-13-ZC0" id="VSo-WV-M23"/>
@@ -245,7 +246,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="nhl-F9-4c7">
                                     <rect key="frame" x="10" y="100" width="284" height="238"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxH-DH-Rzj">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxH-DH-Rzj">
                                             <rect key="frame" x="0.0" y="0.0" width="284" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
@@ -256,7 +257,7 @@
                                                 <outlet property="delegate" destination="rZD-lO-OY0" id="WVR-vT-HL0"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNC-13-ZC0">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNC-13-ZC0">
                                             <rect key="frame" x="0.0" y="68" width="284" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="family-name"/>
@@ -267,7 +268,7 @@
                                                 <outlet property="delegate" destination="rZD-lO-OY0" id="dmZ-Ll-85a"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXt-Lq-q5x">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXt-Lq-q5x">
                                             <rect key="frame" x="0.0" y="136" width="284" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
@@ -278,7 +279,7 @@
                                                 <outlet property="delegate" destination="rZD-lO-OY0" id="Jlu-Bf-yTf"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ars-Y9-sMP">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ars-Y9-sMP">
                                             <rect key="frame" x="0.0" y="204" width="284" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="new-password"/>
@@ -291,12 +292,12 @@
                                         </textField>
                                     </subviews>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQk-Lt-pOL" customClass="MainButton" customModule="Chat_App" customModuleProvider="target">
-                                    <rect key="frame" x="118.66666666666666" y="368" width="67" height="31"/>
+                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQk-Lt-pOL" customClass="CutomButton" customModule="Chat_App" customModuleProvider="target">
+                                    <rect key="frame" x="140" y="368" width="24" height="14"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
                                     <connections>
-                                        <action selector="AuthPressed:" destination="rZD-lO-OY0" eventType="touchUpInside" id="hCH-d4-r0d"/>
+                                        <action selector="buttonPressed:" destination="rZD-lO-OY0" eventType="touchUpInside" id="L3f-3u-fyh"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -325,7 +326,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1028" y="93"/>
+            <point key="canvasLocation" x="3927.1999999999998" y="-11.083743842364532"/>
         </scene>
         <!--Conversations View Controller-->
         <scene sceneID="WKh-MD-Jcs">
@@ -334,13 +335,54 @@
                     <view key="view" contentMode="scaleToFill" id="y1e-0c-fas">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AqH-0z-lKf">
+                                <rect key="frame" x="0.0" y="45" width="375" height="133"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="moS-dY-XzS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nOo-PK-vWX">
+                                            <size key="itemSize" width="92" height="92"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="cv7-SV-Hbm">
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pzz-Xr-Xrg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="92" height="92"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="moS-dY-XzS" secondAttribute="bottom" id="HyW-RR-yst"/>
+                                    <constraint firstAttribute="trailing" secondItem="moS-dY-XzS" secondAttribute="trailing" id="Wrm-NZ-i4j"/>
+                                    <constraint firstItem="moS-dY-XzS" firstAttribute="top" secondItem="AqH-0z-lKf" secondAttribute="top" id="lI5-iS-rLf"/>
+                                    <constraint firstItem="moS-dY-XzS" firstAttribute="leading" secondItem="AqH-0z-lKf" secondAttribute="leading" id="rqJ-jS-6Ve"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uEc-RP-TqU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uEc-RP-TqU" firstAttribute="bottom" secondItem="AqH-0z-lKf" secondAttribute="bottom" constant="600" id="0gN-En-QWB"/>
+                            <constraint firstItem="uEc-RP-TqU" firstAttribute="trailing" secondItem="AqH-0z-lKf" secondAttribute="trailing" id="VIv-fw-st8"/>
+                            <constraint firstItem="AqH-0z-lKf" firstAttribute="top" secondItem="uEc-RP-TqU" secondAttribute="top" constant="1" id="ncg-dU-HWY"/>
+                            <constraint firstItem="AqH-0z-lKf" firstAttribute="leading" secondItem="uEc-RP-TqU" secondAttribute="leading" id="qPs-tF-Ipv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m5z-s6-WTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823" y="96"/>
+            <point key="canvasLocation" x="3016.8000000000002" y="-2.2167487684729066"/>
         </scene>
     </scenes>
     <designables>
@@ -348,7 +390,7 @@
             <size key="intrinsicContentSize" width="200" height="50"/>
         </designable>
         <designable name="dQk-Lt-pOL">
-            <size key="intrinsicContentSize" width="67" height="31"/>
+            <size key="intrinsicContentSize" width="24" height="14"/>
         </designable>
     </designables>
     <resources>
@@ -364,6 +406,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

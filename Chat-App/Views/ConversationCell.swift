@@ -5,4 +5,8 @@
 //  Created by Nor Gh on 28.07.22.
 //
 
-import Foundation
+import UIKit
+
+final class ConversationCell : UICollectionViewCell  {
+
+}

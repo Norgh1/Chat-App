@@ -10,6 +10,7 @@
 		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
 		FB26697428996D0200F8BA7F /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697328996D0200F8BA7F /* MainButton.swift */; };
 		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
+		FB5A72A9289EA80C0092BB28 /* CutomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5A72A8289EA80C0092BB28 /* CutomButton.swift */; };
 		FB5B0A14289AB6C0002CA342 /* NSAtrributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */; };
 		FB767E79289965610005164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB767E78289965610005164B /* Main.storyboard */; };
 		FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */; };
@@ -41,6 +42,7 @@
 		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		FB26697328996D0200F8BA7F /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
+		FB5A72A8289EA80C0092BB28 /* CutomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomButton.swift; sourceTree = "<group>"; };
 		FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAtrributedStringExtension.swift; sourceTree = "<group>"; };
 		FB767E78289965610005164B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				FBCA2168289288FA005B6722 /* SliderView.swift */,
 				FB26697128996CCB00F8BA7F /* SegmentedView.swift */,
 				FB26697328996D0200F8BA7F /* MainButton.swift */,
+				FB5A72A8289EA80C0092BB28 /* CutomButton.swift */,
 				FB7D0111289AC5FD008936CD /* ResizableUICollectionView.swift */,
 			);
 			path = Views;
@@ -282,6 +285,7 @@
 				FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */,
 				FB26697428996D0200F8BA7F /* MainButton.swift in Sources */,
 				FBCA2169289288FA005B6722 /* SliderView.swift in Sources */,
+				FB5A72A9289EA80C0092BB28 /* CutomButton.swift in Sources */,
 				FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */,
 				FBCA21632892857B005B6722 /* Coordinator.swift in Sources */,
 				FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */,
