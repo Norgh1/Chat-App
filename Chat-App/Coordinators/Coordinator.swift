@@ -11,14 +11,12 @@ final class Coordinator {
 	
 	static func showOnboarding(from vc: UIViewController) {
 		let controller = vc.storyboard?.instantiateViewController(withIdentifier: OnboardingViewController.className)
-		controller?.modalPresentationStyle = .fullScreen
 		vc.present(controller!, animated: true)
 		
 	}
 	
 	static func showConversations(from vc: UIViewController) {
-		let controller = vc.storyboard?.instantiateViewController(withIdentifier: ConversationsViewController.className)		
+		let controller = vc.storyboard?.instantiateViewController(withIdentifier: ConversationsViewController.className)
 		vc.present(controller!, animated: true)
-		
 	}
 }
