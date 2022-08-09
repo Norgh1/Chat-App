@@ -67,9 +67,9 @@ private extension OnboardingViewController {
     guard let isSignupState = Bool(exactly: NSNumber(value: segmentedView.selectedIndex)) else {
       fatalError("segmented view has more than 2 options")
     }
-    authButton.setTitle(isSignupState ? "Register" : "Sign in", for: .normal)
-    nameTextField.isHidden = !isSignupState
-    lastNameTextField.isHidden = !isSignupState
+    authButton.setTitle(isSignupState ? "Sign in" : "Register", for: .normal)
+    nameTextField.isHidden = isSignupState
+    lastNameTextField.isHidden = isSignupState
   }
 }
 
