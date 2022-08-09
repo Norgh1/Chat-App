@@ -28,33 +28,51 @@ final class OnboardingViewController: UIViewController {
         //TODO check the auth type: signin or signup
         guard let name = validateField(.name) else {
             //TODO show alert name is missing
+            let alert = UIAlertController(title: "Attenation", message: "Name is Missing!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close Window", style: .default, handler: nil))
+            self.present(alert, animated: true)
             return
         }
         guard let lastName = validateField(.lastName) else {
             //TODO show alert lastName is missing
+            let alert = UIAlertController(title: "Attenation", message: "Lastname is Missing!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close Window", style: .default, handler: nil))
+            self.present(alert, animated: true)
             return
         }
         guard let email = validateField(.email) else {
-            //TODO show alert lastName is missing
+            //TODO show alert email is missing
+            let alert = UIAlertController(title: "Attenation", message: "Email is Missing!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close Window", style: .default, handler: nil))
+            self.present(alert, animated: true)
             return
         }
         guard let password = validateField(.password) else {
-            //TODO show alert lastName is missing
+            //TODO show alert password is missing
+            let alert = UIAlertController(title: "Attenation", message: "Password is Missing!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close Window", style: .default, handler: nil))
+            self.present(alert, animated: true)
             return
         }
+        
         sender.isAnimating = true
         Usermanager.shared.signup(name: name, lastName: lastName, email: email, password: password) {[weak self] response in
             self?.authButton.isAnimating = false
             switch response {
             case .success:
-                print("ok")
                 //TODO corrdinator show conversations
+                print("success")
+                Coordinator.showConversations(from: self!)
             case .generalError:
                 //TODO alert
-                print("someing worng")
+                let alert = UIAlertController(title: "Attenation", message: "Something Wrong!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Close Window", style: .default, handler: nil))
+                self!.present(alert, animated: true)
             case .noConnection:
-                //TODO alert
-                print("sdgs")
+                //TODO alert no connection
+                let alert = UIAlertController(title: "Attenation!", message: "Please chack you connection", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Close", style: .default))
+                self!.present(alert, animated: true)
             }
         }
     }
@@ -106,15 +124,14 @@ private extension OnboardingViewController {
         //TODO validate name, lastName 3-15 chars. email is correctEmail (regex) password: 6-15 chars
         switch fieldType {
         case .name:
-            if ((nameTextField.text?.first!.lowercased()) != nil) {
-                print("Please type firt Simbol uppercase!")
-            }
+            print("Please type firt Simbol uppercase!")
         case .lastName:
             if lastNameTextField.text!.count <= 3 && nameTextField.text!.count <= 15 {
                 print("Lastname must be 3-15 characther")
             }
         case .email:
-            isValidEmail(emailTextField.text!)
+            //isValidEmail(emailTextField.text!)
+            print("Print email")
         case .password:
             if passwordTextField.text!.isEmpty || passwordTextField.text!.count < 6 || passwordTextField.text!.count > 15 {
                 print("Password muct contains 6-15 characthers!")
