@@ -15,22 +15,6 @@ final class ChatManager {
     
 }
 
-//MARK: Authentication
-extension ChatManager {
-    
-    func isSignedIn() -> Bool {
-        return true
-    }
-    
-    func signUp() {
-        
-    }
-    
-    func signIn() {
-        
-    }
-}
-
 //MARK: Conversations
 
 extension ChatManager {
@@ -44,14 +28,6 @@ extension ChatManager {
     }
     
     func sendMessage() {
-        
-    }
-}
-
-//MARK: Users
-
-extension ChatManager {
-    func fetchAllUsers() {
         
     }
 }

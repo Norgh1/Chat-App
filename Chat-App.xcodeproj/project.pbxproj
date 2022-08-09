@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8128A2ACE10093D9B2 /* UserManager.swift */; };
 		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
 		FB26697428996D0200F8BA7F /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697328996D0200F8BA7F /* MainButton.swift */; };
 		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77CF7C8128A2ACE10093D9B2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		FB26697328996D0200F8BA7F /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		FBCA215428928143005B6722 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				77CF7C8128A2ACE10093D9B2 /* UserManager.swift */,
 				FBCA215228928094005B6722 /* ChatManager.swift */,
 			);
 			path = Managers;
@@ -293,6 +296,7 @@
 				FBCA216128928360005B6722 /* ObjectMessage.swift in Sources */,
 				FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */,
 				FBCA215328928094005B6722 /* ChatManager.swift in Sources */,
+				77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */,
 				FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */,
 				FBCA215928928187005B6722 /* ConversationCell.swift in Sources */,
 				FBCA215C28928246005B6722 /* ObjectUser.swift in Sources */,
