@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21219" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZD-lO-OY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZD-lO-OY0">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21200"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -49,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8v-sD-8zK" userLabel="Emoji View">
-                                <rect key="frame" x="0.0" y="97" width="390" height="357"/>
+                                <rect key="frame" x="0.0" y="94" width="390" height="360"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-oB-8hN">
                                         <rect key="frame" x="264" y="50.000000000000007" width="75" height="83.666666666666686"/>
@@ -61,7 +60,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymb-9I-K0H">
-                                        <rect key="frame" x="37" y="227" width="55" height="61"/>
+                                        <rect key="frame" x="37" y="230" width="55" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -70,7 +69,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKL-bg-FZ2">
-                                        <rect key="frame" x="238" y="219" width="122" height="135"/>
+                                        <rect key="frame" x="238" y="222" width="122" height="135"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="113"/>
                                         <color key="textColor" red="0.99301750710000003" green="1" blue="0.95604213410000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -79,7 +78,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J1-lm-woJ">
-                                        <rect key="frame" x="146.66666666666666" y="137" width="57" height="63.333333333333343"/>
+                                        <rect key="frame" x="146.66666666666666" y="138.33333333333334" width="57" height="63.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                         <color key="textColor" name="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -183,7 +182,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XqW-l8-7YI">
-                                <rect key="frame" x="138" y="67" width="114.33333333333331" height="30"/>
+                                <rect key="frame" x="138" y="64" width="114.33333333333331" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="yRX-1a-SAl">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>

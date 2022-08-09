@@ -11,7 +11,7 @@ final class InitialViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if ChatManager.shared.isSignedIn() {
+        if Usermanager.shared.isSignedIn() {
             Coordinator.showConversations(from: self)
             return
         }
