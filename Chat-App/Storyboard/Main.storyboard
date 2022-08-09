@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21219" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZD-lO-OY0">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21200"/>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="InitialViewController" id="BYZ-38-t0r" customClass="InitialViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.99301750710000003" green="1" blue="0.95604213410000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,7 +30,7 @@
             <objects>
                 <viewController storyboardIdentifier="ConversationsViewController" id="KjO-ee-fG0" customClass="ConversationsViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZJc-EZ-mvg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="mi1-EJ-SqK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,14 +45,14 @@
             <objects>
                 <viewController storyboardIdentifier="OnboardingViewController" modalPresentationStyle="overFullScreen" id="rZD-lO-OY0" customClass="OnboardingViewController" customModule="Chat_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xrb-P8-fTW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8v-sD-8zK" userLabel="Emoji View">
-                                <rect key="frame" x="0.0" y="100" width="375" height="322"/>
+                                <rect key="frame" x="0.0" y="97" width="390" height="357"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-oB-8hN">
-                                        <rect key="frame" x="249" y="50.000000000000007" width="75" height="83.666666666666686"/>
+                                        <rect key="frame" x="264" y="50.000000000000007" width="75" height="83.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                         <color key="textColor" red="0.99301750710000003" green="1" blue="0.95604213410000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymb-9I-K0H">
-                                        <rect key="frame" x="37" y="192" width="55" height="61"/>
+                                        <rect key="frame" x="37" y="227" width="55" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKL-bg-FZ2">
-                                        <rect key="frame" x="223" y="184" width="122" height="135"/>
+                                        <rect key="frame" x="238" y="219" width="122" height="135"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="113"/>
                                         <color key="textColor" red="0.99301750710000003" green="1" blue="0.95604213410000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J1-lm-woJ">
-                                        <rect key="frame" x="139" y="119.33333333333333" width="57" height="63.333333333333329"/>
+                                        <rect key="frame" x="146.66666666666666" y="137" width="57" height="63.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                         <color key="textColor" name="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -114,14 +114,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUt-98-uRa">
-                                <rect key="frame" x="0.0" y="728" width="375" height="162.33333333333337"/>
+                                <rect key="frame" x="0.0" y="760" width="390" height="168.66666666666663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a56-aN-6lw">
-                                <rect key="frame" x="0.0" y="402" width="375" height="376"/>
+                                <rect key="frame" x="0.0" y="434" width="390" height="376"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Express your self with emoji " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8f-BK-afc">
-                                        <rect key="frame" x="20" y="30" width="335" height="86"/>
+                                        <rect key="frame" x="20" y="30" width="350" height="86"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -130,7 +130,7 @@
                                         </variation>
                                     </label>
                                     <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vr8-VU-raI" customClass="SliderView" customModule="Chat_App" customModuleProvider="target">
-                                        <rect key="frame" x="52.666666666666657" y="256" width="270" height="70"/>
+                                        <rect key="frame" x="60" y="256" width="270" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -149,7 +149,7 @@
                                         </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat using avatar em emoji gives a different impression, dare to try it?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-Dz-fPp">
-                                        <rect key="frame" x="35" y="166" width="305" height="40"/>
+                                        <rect key="frame" x="35" y="166" width="320" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="lPw-uP-fzI"/>
                                         </constraints>
@@ -183,7 +183,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XqW-l8-7YI">
-                                <rect key="frame" x="130.33333333333334" y="70" width="114.33333333333334" height="30"/>
+                                <rect key="frame" x="138" y="67" width="114.33333333333331" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="yRX-1a-SAl">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -306,6 +306,19 @@
                                             </connections>
                                         </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="400" id="bKI-Mv-Bse"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="bKI-Mv-Bse"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="bKI-Mv-Bse"/>
+                                        </mask>
+                                    </variation>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQk-Lt-pOL" customClass="MainButton" customModule="Chat_App" customModuleProvider="target">
                                     <rect key="frame" x="140" y="368" width="24" height="14"/>
@@ -324,8 +337,15 @@
                                 <constraint firstItem="dQk-Lt-pOL" firstAttribute="top" secondItem="nhl-F9-4c7" secondAttribute="bottom" constant="30" id="Uzq-Bn-7WM"/>
                                 <constraint firstItem="nhl-F9-4c7" firstAttribute="leading" secondItem="8nz-Dj-7qb" secondAttribute="leading" constant="10" id="tQK-pl-cDu"/>
                                 <constraint firstItem="dQk-Lt-pOL" firstAttribute="centerX" secondItem="8nz-Dj-7qb" secondAttribute="centerX" id="tch-v8-95t"/>
+                                <constraint firstItem="nhl-F9-4c7" firstAttribute="centerX" secondItem="8nz-Dj-7qb" secondAttribute="centerX" id="uZD-Od-MCS"/>
                                 <constraint firstItem="XLZ-1s-Si4" firstAttribute="centerX" secondItem="8nz-Dj-7qb" secondAttribute="centerX" id="xST-ng-YDE"/>
                             </constraints>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <mask key="constraints">
+                                    <exclude reference="EEt-PV-smr"/>
+                                    <exclude reference="tQK-pl-cDu"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
