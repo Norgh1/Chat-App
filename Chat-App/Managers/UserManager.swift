@@ -10,6 +10,7 @@ import Foundation
 final class Usermanager {
   
   static let shared = Usermanager()
+  public var currentUser: ObjectUser?
   
   private init() {}
   
@@ -22,17 +23,17 @@ extension Usermanager {
     return true
   }
   
-  func signin() {
+  func signin(email: String, password: String, completion: @escaping (NetworkStatus<Void>) -> Void) {
     
   }
   
-  func signup(name: String, lastName: String, email: String, password: String) {
-    
+  func signup(name: String, lastName: String, email: String, password: String, completion: @escaping (NetworkStatus<Void>) -> Void) {
+
   }
 }
 
 extension Usermanager {
-    func fetchAllUsers() {
-        
-    }
+  func fetchAllUsers() {
+    
+  }
 }

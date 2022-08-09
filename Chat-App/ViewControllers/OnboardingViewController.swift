@@ -25,8 +25,38 @@ final class OnboardingViewController: UIViewController {
   }
   
   @IBAction func buttonPressed(_ sender: MainButton) {
-    sender.isAnimating.toggle()
-    Coordinator.showConversations(from: self)
+    //TODO check the auth type: signin or signup
+    guard let name = validateField(.name) else {
+      //TODO show alert name is missing
+      return
+    }
+    guard let lastName = validateField(.lastName) else {
+      //TODO show alert lastName is missing
+      return
+    }
+    guard let email = validateField(.email) else {
+      //TODO show alert lastName is missing
+      return
+    }
+    guard let password = validateField(.password) else {
+      //TODO show alert lastName is missing
+      return
+    }
+    sender.isAnimating = true
+    Usermanager.shared.signup(name: name, lastName: lastName, email: email, password: password) {[weak self] response in
+      self?.authButton.isAnimating = false
+      switch response {
+        case .success:
+          print("ok")
+          //TODO corrdinator show conversations
+        case .generalError:
+          //TODO alert
+          print("someing worng")
+        case .noConnection:
+          //TODO alert
+          print("sdgs")
+      }
+    }
   }
 }
 
@@ -71,6 +101,11 @@ private extension OnboardingViewController {
     nameTextField.isHidden = isSignupState
     lastNameTextField.isHidden = isSignupState
   }
+  
+  func validateField(_ fieldType: Field) -> String? {
+    //TODO validate name, lastName 3-15 chars. email is correctEmail (regex) password: 6-15 chars
+    return "false"
+  }
 }
 
 //MARK: Textfield delegates
@@ -87,5 +122,15 @@ extension OnboardingViewController: UITextFieldDelegate {
       default: resignFirstResponder()
     }
     return true
+  }
+}
+
+//MARK: Models
+private extension OnboardingViewController {
+  enum Field {
+    case name
+    case lastName
+    case email
+    case password
   }
 }
