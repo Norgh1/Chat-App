@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8128A2ACE10093D9B2 /* UserManager.swift */; };
+		77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */; };
 		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
 		FB26697428996D0200F8BA7F /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697328996D0200F8BA7F /* MainButton.swift */; };
 		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		77CF7C8128A2ACE10093D9B2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		FB26697328996D0200F8BA7F /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				FBF1D4DA28927A8D008C64C3 /* AppDelegate.swift */,
 				FBF1D4DC28927A8D008C64C3 /* SceneDelegate.swift */,
+				77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */,
 				FBF1D4E328927A8E008C64C3 /* Assets.xcassets */,
 				FBF1D4E528927A8E008C64C3 /* LaunchScreen.storyboard */,
 				FBF1D4E828927A8E008C64C3 /* Info.plist */,
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF1D4DF28927A8D008C64C3 /* OnboardingViewController.swift in Sources */,
+				77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */,
 				FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */,
 				FBCA2166289285B3005B6722 /* NSObjectExtension.swift in Sources */,
 				FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */,
