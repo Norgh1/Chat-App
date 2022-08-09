@@ -59,8 +59,8 @@ private extension MainButton {
 
 		let backgroundView = UIView()
 		addSubview(backgroundView)
+        backgroundView.isUserInteractionEnabled = false
 		backgroundView.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
-		backgroundView.translatesAutoresizingMaskIntoConstraints = false
 		backgroundView.backgroundColor = .systemBlue
 		backgroundView.clipsToBounds = true
 		backgroundView.cornerRadius = 10

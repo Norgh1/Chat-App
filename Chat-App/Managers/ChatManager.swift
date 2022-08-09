@@ -19,7 +19,7 @@ final class ChatManager {
 extension ChatManager {
     
     func isSignedIn() -> Bool {
-        return false
+        return true
     }
     
     func signUp() {
