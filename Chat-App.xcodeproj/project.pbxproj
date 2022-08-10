@@ -11,6 +11,8 @@
 		77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */; };
 		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
 		FB26697428996D0200F8BA7F /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697328996D0200F8BA7F /* MainButton.swift */; };
+		FB44AB4928A3F74C001501CD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44AB4828A3F74C001501CD /* StringExtension.swift */; };
+		FB44AB4B28A3F7BA001501CD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44AB4A28A3F7BA001501CD /* UIViewControllerExtension.swift */; };
 		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
 		FB5B0A14289AB6C0002CA342 /* NSAtrributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */; };
 		FB767E79289965610005164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB767E78289965610005164B /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		FB26697328996D0200F8BA7F /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		FB44AB4828A3F74C001501CD /* StringExtension.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; tabWidth = 2; };
+		FB44AB4A28A3F7BA001501CD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
 		FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAtrributedStringExtension.swift; sourceTree = "<group>"; };
 		FB767E78289965610005164B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				FB4CF5E72893ABC8001540CB /* RotationExtension.swift */,
 				FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */,
 				FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */,
+				FB44AB4828A3F74C001501CD /* StringExtension.swift */,
+				FB44AB4A28A3F7BA001501CD /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,7 +178,9 @@
 				FBF1D4D928927A8D008C64C3 /* Chat-App */,
 				FBF1D4D828927A8D008C64C3 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		FBF1D4D828927A8D008C64C3 /* Products */ = {
 			isa = PBXGroup;
@@ -291,12 +299,14 @@
 				FB26697428996D0200F8BA7F /* MainButton.swift in Sources */,
 				FBCA2169289288FA005B6722 /* SliderView.swift in Sources */,
 				FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */,
+				FB44AB4928A3F74C001501CD /* StringExtension.swift in Sources */,
 				FBCA21632892857B005B6722 /* Coordinator.swift in Sources */,
 				FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */,
 				FBCA214928927FC7005B6722 /* SigninViewController.swift in Sources */,
 				FB7D7E0528931D0F00BE4886 /* CornerRadiusExtension.swift in Sources */,
 				FBCA215F28928359005B6722 /* ObjectConversation.swift in Sources */,
 				FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */,
+				FB44AB4B28A3F7BA001501CD /* UIViewControllerExtension.swift in Sources */,
 				FBCA216128928360005B6722 /* ObjectMessage.swift in Sources */,
 				FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */,
 				FBCA215328928094005B6722 /* ChatManager.swift in Sources */,
