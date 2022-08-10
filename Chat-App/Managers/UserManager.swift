@@ -23,17 +23,17 @@ extension Usermanager {
     return true
   }
   
-  func signin(email: String, password: String, completion: @escaping (NetworkStatus<Void>) -> Void) {
+  func signin(email: String, password: String, _ completion: @escaping (NetworkStatus<Void>) -> Void) {
     
   }
   
-  func signup(name: String, lastName: String, email: String, password: String, completion: @escaping (NetworkStatus<Void>) -> Void) {
+  func signup(name: String, lastName: String, email: String, password: String, _ completion: @escaping (NetworkStatus<Void>) -> Void) {
 
   }
 }
 
 extension Usermanager {
-  func fetchAllUsers() {
+  func fetchAllUsers(_ completion: @escaping (NetworkStatus<[ObjectUser]>) -> Void) {
     
   }
 }

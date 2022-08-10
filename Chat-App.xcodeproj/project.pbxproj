@@ -25,7 +25,7 @@
 		FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214C28928002005B6722 /* ContactsViewController.swift */; };
 		FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214E2892801F005B6722 /* ChatViewController.swift */; };
 		FBCA215128928056005B6722 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215028928056005B6722 /* FullScreenImageViewController.swift */; };
-		FBCA215328928094005B6722 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215228928094005B6722 /* ChatManager.swift */; };
+		FBCA215328928094005B6722 /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215228928094005B6722 /* ConversationManager.swift */; };
 		FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215528928158005B6722 /* UserDefaultsService.swift */; };
 		FBCA215928928187005B6722 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215828928187005B6722 /* ConversationCell.swift */; };
 		FBCA215C28928246005B6722 /* ObjectUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215B28928246005B6722 /* ObjectUser.swift */; };
@@ -60,7 +60,7 @@
 		FBCA214C28928002005B6722 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		FBCA214E2892801F005B6722 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FBCA215028928056005B6722 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
-		FBCA215228928094005B6722 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		FBCA215228928094005B6722 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
 		FBCA215528928158005B6722 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		FBCA215828928187005B6722 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		FBCA215B28928246005B6722 /* ObjectUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectUser.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				77CF7C8128A2ACE10093D9B2 /* UserManager.swift */,
-				FBCA215228928094005B6722 /* ChatManager.swift */,
+				FBCA215228928094005B6722 /* ConversationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				FB44AB4B28A3F7BA001501CD /* UIViewControllerExtension.swift in Sources */,
 				FBCA216128928360005B6722 /* ObjectMessage.swift in Sources */,
 				FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */,
-				FBCA215328928094005B6722 /* ChatManager.swift in Sources */,
+				FBCA215328928094005B6722 /* ConversationManager.swift in Sources */,
 				77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */,
 				FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */,
 				FBCA215928928187005B6722 /* ConversationCell.swift in Sources */,
