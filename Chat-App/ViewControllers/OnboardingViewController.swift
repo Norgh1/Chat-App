@@ -134,7 +134,7 @@ private extension OnboardingViewController {
     authButton.isAnimating = false
     switch response {
     case .success:
-      Coordinator.showConversations(from: self)
+      Coordinator.showConversations()
     case .generalError:
       showAlert(title: "Oops!", message: "Something went wrong")
     case .noConnection:

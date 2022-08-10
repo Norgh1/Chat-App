@@ -8,15 +8,18 @@
 import UIKit
 
 final class Coordinator {
-	
-	static func showOnboarding(from vc: UIViewController) {
-		let controller = vc.storyboard?.instantiateViewController(withIdentifier: OnboardingViewController.className)
-		vc.present(controller!, animated: true)
-		
+  
+  private static var window: UIWindow? {
+    return (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window
+  }
+  
+	static func showOnboarding() {
+    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: OnboardingViewController.className)
+    window?.rootViewController = controller
 	}
 	
-	static func showConversations(from vc: UIViewController) {
-		let controller = vc.storyboard?.instantiateViewController(withIdentifier: ConversationsViewController.className)
-		vc.present(controller!, animated: true)
-	}
+	static func showConversations() {
+    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "conversations")
+    window?.rootViewController =  controller
+  }
 }
