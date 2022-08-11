@@ -8,37 +8,33 @@
 import UIKit
 
 @propertyWrapper
-
 final class UserDefaultsService<T: Codable> {
   
-  private var key: String
-  private let defaultValue: T
+  private let key: Key
   
-  init(key: String, defaultValue: T) {
+  init(_ key: Key) {
     self.key = key
-    self.defaultValue = defaultValue
   }
   
-  var wrappedValue: T {
+  var wrappedValue: T? {
     get {
-      guard let data = UserDefaults.standard.object(forKey: key) as? Data else {
-      return defaultValue
-      }
-      let value = try? JSONDecoder().decode(T.self, from: data)
-      return value ?? defaultValue
+      guard let data = UserDefaults.standard.object(forKey: key.rawValue) as? Data else { return nil }
+      return try? JSONDecoder().decode(T.self, from: data)
     }
     set {
-      
-      let data = try? JSONEncoder().encode(newValue)
-      UserDefaults.standard.set(data, forKey: key)
+      guard let value = newValue else {
+        UserDefaults.standard.removeObject(forKey: key.rawValue)
+        return
+      }
+      let data = try? JSONEncoder().encode(value)
+      UserDefaults.standard.set(data, forKey: key.rawValue)
     }
   }
 }
 
 //MARK: Model
-extension UserDefaults {
-	enum Key: String {
-		case isSignedin
-    case isSignup
-	}
+extension UserDefaultsService {
+  enum Key: String {
+    case isFirstLaunch
+  }
 }
