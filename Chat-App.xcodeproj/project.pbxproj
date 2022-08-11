@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		778246E028A5561A00DB3260 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778246DF28A5561A00DB3260 /* FirestoreService.swift */; };
+		778246E228A55A2100DB3260 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778246E128A55A2100DB3260 /* Identifiable.swift */; };
 		77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8128A2ACE10093D9B2 /* UserManager.swift */; };
 		77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */; };
 		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		778246DF28A5561A00DB3260 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		778246E128A55A2100DB3260 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		77CF7C8128A2ACE10093D9B2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		778246E328A55A2500DB3260 /* Protocls */ = {
+			isa = PBXGroup;
+			children = (
+				778246E128A55A2100DB3260 /* Identifiable.swift */,
+			);
+			path = Protocls;
+			sourceTree = "<group>";
+		};
 		FBCA214428927EAF005B6722 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCA215528928158005B6722 /* UserDefaultsService.swift */,
+				778246DF28A5561A00DB3260 /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -208,6 +221,7 @@
 				FBCA215428928143005B6722 /* Managers */,
 				FBCA21572892815F005B6722 /* Services */,
 				FBCA215D2892824A005B6722 /* Models */,
+				778246E328A55A2500DB3260 /* Protocls */,
 				FBCA2167289285C3005B6722 /* Extensions */,
 				FBF1D4EE28927E15008C64C3 /* Application */,
 			);
@@ -310,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF1D4DF28927A8D008C64C3 /* OnboardingViewController.swift in Sources */,
+				778246E028A5561A00DB3260 /* FirestoreService.swift in Sources */,
 				77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */,
 				FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */,
 				FBCA2166289285B3005B6722 /* NSObjectExtension.swift in Sources */,
@@ -322,6 +337,7 @@
 				FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */,
 				FBCA214928927FC7005B6722 /* SigninViewController.swift in Sources */,
 				FB7D7E0528931D0F00BE4886 /* CornerRadiusExtension.swift in Sources */,
+				778246E228A55A2100DB3260 /* Identifiable.swift in Sources */,
 				FBCA215F28928359005B6722 /* ObjectConversation.swift in Sources */,
 				FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */,
 				FB44AB4B28A3F7BA001501CD /* UIViewControllerExtension.swift in Sources */,

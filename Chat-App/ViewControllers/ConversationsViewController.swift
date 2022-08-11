@@ -10,10 +10,13 @@ import UIKit
 class ConversationsViewController: UIViewController {
   
   @IBAction func logoutPressed(_ sender: Any) {
-    Usermanager.shared.logout()
-    Coordinator.showOnboarding()
+    Usermanager.shared.logout { status in
+      guard case .success = status else {
+        return
+      }
+      Coordinator.showOnboarding()
+    }
   }
-  
 }
 
 
