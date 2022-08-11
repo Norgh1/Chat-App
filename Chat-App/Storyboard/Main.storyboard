@@ -362,6 +362,11 @@
                                 <constraint firstItem="nhl-F9-4c7" firstAttribute="centerX" secondItem="8nz-Dj-7qb" secondAttribute="centerX" id="uZD-Od-MCS"/>
                                 <constraint firstItem="XLZ-1s-Si4" firstAttribute="centerX" secondItem="8nz-Dj-7qb" secondAttribute="centerX" id="xST-ng-YDE"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <variation key="heightClass=regular-widthClass=regular">
                                 <mask key="constraints">
                                     <exclude reference="EEt-PV-smr"/>
