@@ -8,8 +8,7 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-final class ObjectUser: Identifiable {
-  
+final class ObjectUser: Identifiable {  
   var id = UUID().uuidString
   var name: String?
   var lastName: String?
@@ -38,7 +37,6 @@ final class ObjectUser: Identifiable {
   }
   
   init() {
-    
   }
 }
 

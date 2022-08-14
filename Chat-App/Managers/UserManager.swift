@@ -55,6 +55,7 @@ extension Usermanager {
       user.name = name
       user.lastName = lastName
       user.email = email
+      
       self.service.set(user, path: .users) { status in
         self.currentUser = user
         completion(status)

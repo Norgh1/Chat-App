@@ -7,11 +7,14 @@
 
 import Foundation
 
-final class ObjectConversation {
+final class ObjectConversation: Codable {
 	
-	let id = UUID().uuidString
+  var id = UUID().uuidString
 	var participantIds = [String]()
 	var lastMessage: String?
 	var lastMessageTimeStamp = 0
-	
+  
 }
+
+
+

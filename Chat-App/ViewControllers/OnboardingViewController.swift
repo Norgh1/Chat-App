@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestoreSwift
 
 final class OnboardingViewController: UIViewController {
   
@@ -103,7 +104,8 @@ private extension OnboardingViewController {
         return password
       }
       showAlert(title: "Hey!", message: "your password is missing")
-    }
+
+     }
     return nil
   }
 }
