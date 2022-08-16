@@ -9,6 +9,9 @@ import UIKit
 
 final class UsersCell: UICollectionViewCell {
   
+//  @IBOutlet weak var userView: UserView!
+//  @IBOutlet weak var userNameLabel: UILabel!
+  
   
   func configure(_ user: [ObjectUser]) -> UsersCell {
     return self

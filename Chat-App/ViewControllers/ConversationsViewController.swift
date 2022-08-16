@@ -16,7 +16,7 @@ final class ConversationsViewController: UIViewController {
   private var users = [ObjectUser]()
   private var conversations = [ObjectConversation]()
   private var state: Mode = .inital {
-    didSet { updateUI() }
+    didSet { collectionView.reloadData() }
   }
   
   override func viewDidLoad() {
@@ -30,20 +30,32 @@ final class ConversationsViewController: UIViewController {
 //MARK: Private methods
 private extension ConversationsViewController {
   func observeUsers() {
-    
+    Usermanager.shared.fetchAllUsers {[weak self] result in
+      switch result {
+        case .generalError, .noConnection:
+          self?.state = .networkError
+        case .success(let users):
+          self?.users = users ?? []
+          self?.state = .normal
+      }
+    }
   }
   
   func observeConversations() {
-    
-  }
-  
-  func updateUI() {
-    
+    ConversationManager.shared.observeConversations {[weak self] result in
+      switch result {
+        case .generalError, .noConnection:
+          self?.state = .networkError
+        case .success(let conversations):
+          self?.conversations = conversations ?? []
+          self?.state = .normal
+      }
+    }
   }
 }
 
 //MARK: CollectionView methods
-extension ConversationsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ConversationsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     switch state {
       case .inital, .networkError, .noItems:
@@ -57,8 +69,7 @@ extension ConversationsViewController: UICollectionViewDelegate, UICollectionVie
     switch state {
       case .inital, .networkError, .noItems:
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceholderCell.className, for: indexPath) as! PlaceholderCell
-        //TODO configure cell
-        return cell
+        return cell.configure(state)
       case .normal:
         guard indexPath.row != 0 else {
           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UsersCell.className, for: indexPath) as! UsersCell
@@ -72,13 +83,21 @@ extension ConversationsViewController: UICollectionViewDelegate, UICollectionVie
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     guard state == .normal, indexPath.row != 0 else { return }
     //TODO
-    let conversation = conversations[indexPath.row - 1]
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    switch state {
+      case .networkError, .inital, .noItems:
+        return collectionView.bounds.size
+      case .normal:
+        return CGSize(width: collectionView.bounds.width, height: 80)
+    }
   }
 }
 
 
 //MARK: Models
-private extension ConversationsViewController {
+extension ConversationsViewController {
   enum Mode {
     case inital
     case noItems

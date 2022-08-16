@@ -34,8 +34,8 @@ final class ConversationManager {
 extension ConversationManager {
   
   func observeConversations(_ completion: @escaping (NetworkStatus<[ObjectConversation]>) -> Void) {
-    service.observe(type: [ObjectConversation].self, path: .conversations) { snapshot in
-      print("Here is snapshot \(snapshot)")
+    service.observe(type: ObjectConversation.self, path: .conversations) { snapshot in
+      
     }
   }
   
