@@ -11,6 +11,7 @@
 		778246E228A55A2100DB3260 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778246E128A55A2100DB3260 /* Identifiable.swift */; };
 		77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8128A2ACE10093D9B2 /* UserManager.swift */; };
 		77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */; };
+		FB1D0BB228AB86EA00E4B7B6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D0BB128AB86EA00E4B7B6 /* UserModel.swift */; };
 		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
 		FB26697428996D0200F8BA7F /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697328996D0200F8BA7F /* MainButton.swift */; };
 		FB44AB4928A3F74C001501CD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44AB4828A3F74C001501CD /* StringExtension.swift */; };
@@ -22,6 +23,7 @@
 		FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CF5E72893ABC8001540CB /* RotationExtension.swift */; };
 		FB5B0A14289AB6C0002CA342 /* NSAtrributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */; };
 		FB767E79289965610005164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB767E78289965610005164B /* Main.storyboard */; };
+		FB7C898F28AAE73600EE1546 /* UICollectionViewFlowLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7C898E28AAE73600EE1546 /* UICollectionViewFlowLayoutExtension.swift */; };
 		FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */; };
 		FB7D0112289AC5FD008936CD /* ResizableUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D0111289AC5FD008936CD /* ResizableUICollectionView.swift */; };
 		FB7D7E0528931D0F00BE4886 /* CornerRadiusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */; };
@@ -52,6 +54,7 @@
 		778246E128A55A2100DB3260 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		77CF7C8128A2ACE10093D9B2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
+		FB1D0BB128AB86EA00E4B7B6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		FB26697328996D0200F8BA7F /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		FB44AB4828A3F74C001501CD /* StringExtension.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -60,6 +63,7 @@
 		FB4CF5E72893ABC8001540CB /* RotationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExtension.swift; sourceTree = "<group>"; };
 		FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAtrributedStringExtension.swift; sourceTree = "<group>"; };
 		FB767E78289965610005164B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FB7C898E28AAE73600EE1546 /* UICollectionViewFlowLayoutExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewFlowLayoutExtension.swift; sourceTree = "<group>"; };
 		FB7CF1B428940AA600B66C78 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		FB7D0111289AC5FD008936CD /* ResizableUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableUICollectionView.swift; sourceTree = "<group>"; };
 		FB7D7E0428931D0F00BE4886 /* CornerRadiusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusExtension.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				FBCA215B28928246005B6722 /* ObjectUser.swift */,
 				FBCA215E28928359005B6722 /* ObjectConversation.swift */,
 				FBCA216028928360005B6722 /* ObjectMessage.swift */,
+				FB1D0BB128AB86EA00E4B7B6 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				FB5B0A13289AB6C0002CA342 /* NSAtrributedStringExtension.swift */,
 				FB44AB4828A3F74C001501CD /* StringExtension.swift */,
 				FB44AB4A28A3F7BA001501CD /* UIViewControllerExtension.swift */,
+				FB7C898E28AAE73600EE1546 /* UICollectionViewFlowLayoutExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -331,7 +337,9 @@
 				FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */,
 				FB26697428996D0200F8BA7F /* MainButton.swift in Sources */,
 				FBCA2169289288FA005B6722 /* SliderView.swift in Sources */,
+				FB1D0BB228AB86EA00E4B7B6 /* UserModel.swift in Sources */,
 				FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */,
+				FB7C898F28AAE73600EE1546 /* UICollectionViewFlowLayoutExtension.swift in Sources */,
 				FB44AB4928A3F74C001501CD /* StringExtension.swift in Sources */,
 				FBCA21632892857B005B6722 /* Coordinator.swift in Sources */,
 				FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */,
