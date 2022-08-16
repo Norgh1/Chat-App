@@ -88,4 +88,19 @@ extension Usermanager {
       }
     }
   }
+  
+  func observeAllUsers(_ completion: @escaping (NetworkStatus<[ObjectUser]>) -> Void) {
+    service.observe(type: ObjectUser.self, path: .users) { response in
+      switch response {
+        case .success(let users):
+          let otherUsers = users?.filter({$0.id != (self.currentUser?.id ?? "")})
+          completion(.success(otherUsers))
+        case .noConnection:
+          completion(.noConnection)
+        case .generalError:
+          completion(.generalError)
+      }
+    }
+  }
+
 }

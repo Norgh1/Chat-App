@@ -421,25 +421,78 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UsersCell" id="IUZ-r8-HMP" customClass="UsersCell" customModule="Chat_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="430" width="128" height="128"/>
+                                        <rect key="frame" x="47" y="430" width="296" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Om2-1U-wGp">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="296" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APq-8g-BX1">
-                                                    <rect key="frame" x="19" y="54" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CeQ-yn-F9j">
+                                                    <rect key="frame" x="0.0" y="0.0" width="296" height="149"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QWX-xr-5rx">
+                                                        <size key="itemSize" width="60" height="80"/>
+                                                        <size key="estimatedItemSize" width="60" height="80"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserSingleCell" id="hW1-0q-7eq" customClass="UserSingleCell" customModule="Chat_App" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="34.666666666666664" width="60" height="80"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="94G-Y9-1mW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIE-T0-hHw">
+                                                                        <rect key="frame" x="0.0" y="60" width="60" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PP-og-q7o" customClass="UserView" customModule="Chat_App" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="1PP-og-q7o" secondAttribute="height" multiplier="1:1" id="BFp-Ir-pUd"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="AccentColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="1PP-og-q7o" firstAttribute="bottom" secondItem="CIE-T0-hHw" secondAttribute="top" id="Su5-mn-4h5"/>
+                                                                    <constraint firstItem="1PP-og-q7o" firstAttribute="leading" secondItem="94G-Y9-1mW" secondAttribute="leading" id="d0H-dk-LnP"/>
+                                                                    <constraint firstItem="CIE-T0-hHw" firstAttribute="leading" secondItem="94G-Y9-1mW" secondAttribute="leading" id="geq-mI-pOi"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="1PP-og-q7o" secondAttribute="trailing" id="m98-aW-igv"/>
+                                                                    <constraint firstItem="1PP-og-q7o" firstAttribute="top" secondItem="94G-Y9-1mW" secondAttribute="top" id="yHh-tI-bR7"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="CIE-T0-hHw" secondAttribute="trailing" id="zV6-Tm-WQB"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="60" height="80"/>
+                                                            <connections>
+                                                                <outlet property="userNameLabel" destination="CIE-T0-hHw" id="eVC-id-jrf"/>
+                                                                <outlet property="userView" destination="1PP-og-q7o" id="yLQ-Xq-SUV"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="CeQ-yn-F9j" secondAttribute="trailing" id="7iu-v4-EWX"/>
+                                                <constraint firstItem="CeQ-yn-F9j" firstAttribute="leading" secondItem="Om2-1U-wGp" secondAttribute="leading" id="8h9-H8-gsN"/>
+                                                <constraint firstItem="CeQ-yn-F9j" firstAttribute="top" secondItem="Om2-1U-wGp" secondAttribute="top" id="F91-Cm-X70"/>
+                                                <constraint firstAttribute="bottom" secondItem="CeQ-yn-F9j" secondAttribute="bottom" id="nvQ-mu-QVE"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" name="AccentColor"/>
+                                        <size key="customSize" width="296" height="149"/>
+                                        <connections>
+                                            <outlet property="collectionView" destination="CeQ-yn-F9j" id="v4X-3Q-7MB"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ConversationCell" id="Z48-tW-Z2E" customClass="ConversationCell" customModule="Chat_App" customModuleProvider="target">
-                                        <rect key="frame" x="138" y="430" width="128" height="128"/>
+                                        <rect key="frame" x="131" y="589" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ELN-zO-cVt">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>

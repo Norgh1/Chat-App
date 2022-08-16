@@ -30,7 +30,7 @@ final class ConversationsViewController: UIViewController {
 //MARK: Private methods
 private extension ConversationsViewController {
   func observeUsers() {
-    Usermanager.shared.fetchAllUsers {[weak self] result in
+    Usermanager.shared.observeAllUsers {[weak self] result in
       switch result {
         case .generalError, .noConnection:
           self?.state = .networkError
