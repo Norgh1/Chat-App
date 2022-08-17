@@ -22,4 +22,19 @@ final class Coordinator {
     let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "conversations")
     window?.rootViewController =  controller
   }
+  
+  static func showEditProfile(from vc: UIViewController) {
+    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: EditProfileViewController.className)
+    vc.present(controller, animated: true)
+  }
+  
+  static func showCompose(from vc: UIViewController) {
+    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: UserComposeViewController.className)
+    vc.present(controller, animated: true)
+  }
+  
+  static func showMessages(conversationId: String, from vc: UIViewController) {
+    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: MessagesViewController.className)
+    vc.show(controller, sender: vc)
+  }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7757E74E28AD36F3001698E3 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757E74D28AD36F3001698E3 /* EditProfileViewController.swift */; };
+		7757E75028AD3725001698E3 /* UserComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757E74F28AD3725001698E3 /* UserComposeViewController.swift */; };
+		7757E75228AD374C001698E3 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757E75128AD374C001698E3 /* MessagesViewController.swift */; };
 		778246E028A5561A00DB3260 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778246DF28A5561A00DB3260 /* FirestoreService.swift */; };
 		778246E228A55A2100DB3260 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778246E128A55A2100DB3260 /* Identifiable.swift */; };
 		77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8128A2ACE10093D9B2 /* UserManager.swift */; };
@@ -53,6 +56,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7757E74D28AD36F3001698E3 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		7757E74F28AD3725001698E3 /* UserComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserComposeViewController.swift; sourceTree = "<group>"; };
+		7757E75128AD374C001698E3 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		778246DF28A5561A00DB3260 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		778246E128A55A2100DB3260 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		77CF7C8128A2ACE10093D9B2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -140,6 +146,9 @@
 				FBCA214C28928002005B6722 /* ContactsViewController.swift */,
 				FBCA214E2892801F005B6722 /* ChatViewController.swift */,
 				FBCA215028928056005B6722 /* FullScreenImageViewController.swift */,
+				7757E74D28AD36F3001698E3 /* EditProfileViewController.swift */,
+				7757E74F28AD3725001698E3 /* UserComposeViewController.swift */,
+				7757E75128AD374C001698E3 /* MessagesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -355,6 +364,7 @@
 				77F4AF3D28ABE8F800A92B54 /* PlaceholderCell.swift in Sources */,
 				FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */,
 				FB26697428996D0200F8BA7F /* MainButton.swift in Sources */,
+				7757E74E28AD36F3001698E3 /* EditProfileViewController.swift in Sources */,
 				FBCA2169289288FA005B6722 /* SliderView.swift in Sources */,
 				FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */,
 				FB44AB4928A3F74C001501CD /* StringExtension.swift in Sources */,
@@ -368,11 +378,13 @@
 				FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */,
 				FB44AB4B28A3F7BA001501CD /* UIViewControllerExtension.swift in Sources */,
 				FBCA216128928360005B6722 /* ObjectMessage.swift in Sources */,
+				7757E75228AD374C001698E3 /* MessagesViewController.swift in Sources */,
 				FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */,
 				FBCA215328928094005B6722 /* ConversationManager.swift in Sources */,
 				77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */,
 				FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */,
 				FBCA215928928187005B6722 /* ConversationCell.swift in Sources */,
+				7757E75028AD3725001698E3 /* UserComposeViewController.swift in Sources */,
 				FBCA215C28928246005B6722 /* ObjectUser.swift in Sources */,
 				77E8BBBF28ABF37F005FE79D /* UserSingleCell.swift in Sources */,
 				FBF1D4DD28927A8D008C64C3 /* SceneDelegate.swift in Sources */,
