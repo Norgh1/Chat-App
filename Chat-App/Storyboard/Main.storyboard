@@ -540,7 +540,18 @@
                             <constraint firstItem="HMx-1T-Gdt" firstAttribute="bottom" secondItem="jfb-wt-ypK" secondAttribute="bottom" id="tdu-pC-zzG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Conversations" id="RLo-KM-d0y"/>
+                    <navigationItem key="navigationItem" title="Conversations" id="RLo-KM-d0y">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="person.crop.circle.fill" catalog="system" id="7jV-nf-8dM">
+                            <connections>
+                                <action selector="editProfileSelected:" destination="5V9-8i-YTs" id="aQi-9r-vg2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="plus.message.fill" catalog="system" id="Yl1-eo-TL7">
+                            <connections>
+                                <action selector="newConversationPressed:" destination="5V9-8i-YTs" id="ByG-zV-wYg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="jfb-wt-ypK" id="Brw-fb-RY9"/>
                     </connections>
@@ -590,6 +601,8 @@
     </designables>
     <resources>
         <image name="image" width="100" height="100"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus.message.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

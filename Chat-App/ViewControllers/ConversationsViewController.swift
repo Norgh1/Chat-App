@@ -27,6 +27,18 @@ final class ConversationsViewController: UIViewController {
   }
 }
 
+//MARK: IBActions
+private extension ConversationsViewController {
+  @IBAction func editProfileSelected(_ sender: Any) {
+    Coordinator.showEditProfile(from: self)
+  }
+  
+  @IBAction func newConversationPressed(_ sender: Any) {
+    Coordinator.showCompose(from: self)
+  }
+}
+
+
 //MARK: Private methods
 private extension ConversationsViewController {
   func observeUsers() {
