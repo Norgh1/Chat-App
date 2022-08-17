@@ -22,7 +22,7 @@ final class ConversationManager {
   
 }
 
-//MARK: Public Methods
+//MARK: Public Methods Conversations
 extension ConversationManager {
   func observeConversations(_ completion: @escaping (NetworkStatus<[ObjectConversation]>) -> Void) {
     service.observe(type: ObjectConversation.self, path: .conversations) { response in
@@ -39,6 +39,28 @@ extension ConversationManager {
     }
   }
   
+  func createConversation(participantId: String, _ completion: @escaping (NetworkStatus<ObjectConversation>) -> Void) {
+    guard let userId = Usermanager.shared.currentUser?.id else {
+      completion(.generalError)
+      return
+    }
+    let conversation = ObjectConversation()
+    conversation.participantIds = [userId, participantId]
+    service.set(conversation, path: .conversations) { response in
+      switch response {
+        case .success:
+          completion(.success(conversation))
+        case .noConnection:
+          completion(.noConnection)
+        case .generalError:
+          completion(.generalError)
+      }
+    }
+  }
+}
+
+//MARK: Public methods messages
+extension ConversationManager {
   func observeMessages(conversationId: String, _ completion: @escaping (NetworkStatus<[ObjectMessage]>) -> Void) {
     service.observe(type: ObjectMessage.self, path: .conversations, documentId: conversationId, secondPath: .messeges) { response in
       switch response {
