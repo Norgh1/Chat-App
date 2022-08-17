@@ -82,7 +82,8 @@ extension ConversationsViewController: UICollectionViewDelegateFlowLayout, UICol
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     guard state == .normal, indexPath.row != 0 else { return }
-    //TODO
+    let id = conversations[indexPath.row - 1].id
+    Coordinator.showMessages(conversationId: id, from: self)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

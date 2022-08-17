@@ -36,8 +36,6 @@
 		FBCA214728927F81005B6722 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214628927F81005B6722 /* InitialViewController.swift */; };
 		FBCA214928927FC7005B6722 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214828927FC7005B6722 /* SigninViewController.swift */; };
 		FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214A28927FE3005B6722 /* ConversationsViewController.swift */; };
-		FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214C28928002005B6722 /* ContactsViewController.swift */; };
-		FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA214E2892801F005B6722 /* ChatViewController.swift */; };
 		FBCA215128928056005B6722 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215028928056005B6722 /* FullScreenImageViewController.swift */; };
 		FBCA215328928094005B6722 /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215228928094005B6722 /* ConversationManager.swift */; };
 		FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA215528928158005B6722 /* UserDefaultsService.swift */; };
@@ -81,8 +79,6 @@
 		FBCA214628927F81005B6722 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		FBCA214828927FC7005B6722 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		FBCA214A28927FE3005B6722 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
-		FBCA214C28928002005B6722 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		FBCA214E2892801F005B6722 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FBCA215028928056005B6722 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		FBCA215228928094005B6722 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
 		FBCA215528928158005B6722 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
@@ -143,12 +139,10 @@
 				FBCA214828927FC7005B6722 /* SigninViewController.swift */,
 				FBF1D4DE28927A8D008C64C3 /* OnboardingViewController.swift */,
 				FBCA214A28927FE3005B6722 /* ConversationsViewController.swift */,
-				FBCA214C28928002005B6722 /* ContactsViewController.swift */,
-				FBCA214E2892801F005B6722 /* ChatViewController.swift */,
+				7757E75128AD374C001698E3 /* MessagesViewController.swift */,
 				FBCA215028928056005B6722 /* FullScreenImageViewController.swift */,
 				7757E74D28AD36F3001698E3 /* EditProfileViewController.swift */,
 				7757E74F28AD3725001698E3 /* UserComposeViewController.swift */,
-				7757E75128AD374C001698E3 /* MessagesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -366,10 +360,8 @@
 				FB26697428996D0200F8BA7F /* MainButton.swift in Sources */,
 				7757E74E28AD36F3001698E3 /* EditProfileViewController.swift in Sources */,
 				FBCA2169289288FA005B6722 /* SliderView.swift in Sources */,
-				FBCA214D28928002005B6722 /* ContactsViewController.swift in Sources */,
 				FB44AB4928A3F74C001501CD /* StringExtension.swift in Sources */,
 				FBCA21632892857B005B6722 /* Coordinator.swift in Sources */,
-				FBCA214F2892801F005B6722 /* ChatViewController.swift in Sources */,
 				77F4AF4228ABE9BB00A92B54 /* UserView.swift in Sources */,
 				FBCA214928927FC7005B6722 /* SigninViewController.swift in Sources */,
 				FB7D7E0528931D0F00BE4886 /* CornerRadiusExtension.swift in Sources */,

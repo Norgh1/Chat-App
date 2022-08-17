@@ -34,7 +34,8 @@ final class Coordinator {
   }
   
   static func showMessages(conversationId: String, from vc: UIViewController) {
-    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: MessagesViewController.className)
+    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: MessagesViewController.className) as! MessagesViewController
+    controller.conversationId = conversationId
     vc.show(controller, sender: vc)
   }
 }

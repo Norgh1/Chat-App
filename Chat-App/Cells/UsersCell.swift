@@ -7,11 +7,18 @@
 
 import UIKit
 
+protocol UsersCellDelegate: UIViewController {
+  func didSelect(_ user: ObjectUser)
+}
+
 final class UsersCell: UICollectionViewCell {
   
   //MARK: Private properties
   @IBOutlet weak private var collectionView: UICollectionView!
   private var users = [ObjectUser]()
+  
+  //MARK: Public properties
+  weak var delegate: UsersCellDelegate?
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -35,5 +42,9 @@ extension UsersCell: UICollectionViewDelegate, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserSingleCell.className, for: indexPath) as! UserSingleCell
     return cell.configure(users[indexPath.row])
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    delegate?.didSelect(users[indexPath.row])
   }
 }
