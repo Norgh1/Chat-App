@@ -6,15 +6,44 @@
 	//
 
 import Foundation
+import FirebaseFirestoreSwift
 
-final class ObjectConversation: Codable {
+final class ObjectConversation : Identifiable {
 	
   var id = UUID().uuidString
 	var participantIds = [String]()
 	var lastMessage: String?
 	var lastMessageTimeStamp = 0
   
+  
+  init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    id = try container.decode(String.self, forKey: .id)
+    participantIds = try container.decode([String].self, forKey: .participantIds)
+    lastMessage = try container.decode(String.self, forKey: .lastMessage)
+    lastMessageTimeStamp = try container.decode(Int.self, forKey: .lastMessageTimeStamp)
+  }
+  
+  func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    try container.encode(self.id, forKey: .id)
+    try container.encode(self.participantIds, forKey: .participantIds)
+    try container.encode(self.lastMessage, forKey: .lastMessage)
+    try container.encode(self.lastMessageTimeStamp, forKey: .lastMessageTimeStamp)
+  }
+  
+  init(){
+    
+  }
+  
 }
 
-
+private extension ObjectConversation {
+  enum CodingKeys: CodingKey {
+    case id
+    case participantIds
+    case lastMessage
+    case lastMessageTimeStamp
+  }
+}
 
