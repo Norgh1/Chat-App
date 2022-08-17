@@ -8,13 +8,12 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-final class ObjectConversation : Identifiable {
+final class ObjectConversation: Identifiable {
 	
   var id = UUID().uuidString
 	var participantIds = [String]()
 	var lastMessage: String?
 	var lastMessageTimeStamp = 0
-  
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -32,10 +31,7 @@ final class ObjectConversation : Identifiable {
     try container.encode(self.lastMessageTimeStamp, forKey: .lastMessageTimeStamp)
   }
   
-  init(){
-    
-  }
-  
+  init(){ }
 }
 
 private extension ObjectConversation {

@@ -6,42 +6,37 @@
 	//
 
 import Foundation
-import CoreLocation
 
 final class ObjectMessage: Identifiable {
   
-  private var type = ContentMode.text
   var id = UUID().uuidString
 	var reciepeintId = UUID().uuidString
-	var message: String?
-	var attachedImageURL: String?
-	var attachedLocation = CLLocationCoordinate2D()
+  var messageType = MessageType.text
+  var content: String?
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     id = try container.decode(String.self, forKey: .id)
     reciepeintId = try container.decode(String.self, forKey: .reciepeintId)
-    message = try container.decode(String.self, forKey: .message)
-    attachedImageURL = try container.decode(String.self, forKey: .attachedImageURL)
-    //attachedLocation = try container.decode(String.self, forKey: .attachedLocation)
+    let messageTypeValue = try container.decode(Int.self, forKey: .messageType)
+    messageType = MessageType(rawValue: messageTypeValue) ?? .text
+    content = try container.decode(String.self, forKey: .content)
   }
   
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CodingKeys.self)
-    try container.encode(self.id, forKey: CodingKeys.id)
-    try container.encode(self.reciepeintId, forKey: CodingKeys.reciepeintId)
-    try container.encode(self.message, forKey: CodingKeys.message)
-    try container.encode(self.attachedImageURL, forKey: CodingKeys.attachedImageURL)
+    try container.encode(self.id, forKey: .id)
+    try container.encode(reciepeintId, forKey: .reciepeintId)
+    try container.encode(messageType.rawValue, forKey: .messageType)
+    try container.encode(content, forKey: .content)
   }
   
-  init(){
-    
-  }
+  init() {}
 }
 
-private extension ObjectMessage {
+extension ObjectMessage {
 	
-  enum ContentMode {
+  enum MessageType: Int {
 		case text
 		case image
 		case location
@@ -50,9 +45,7 @@ private extension ObjectMessage {
   enum CodingKeys: CodingKey {
     case id
     case reciepeintId
-    case type
-    case message
-    case attachedImageURL
-    case attachedLocation
+    case messageType
+    case content
   }
 }
