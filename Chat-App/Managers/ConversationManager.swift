@@ -8,72 +8,60 @@
 import Foundation
 import FirebaseFirestoreSwift
 import FirebaseFirestore
-import FirebaseAuth
 
 
 final class ConversationManager {
-
-
-
-  //MARK: Private proparties
   
+  //MARK: Private properties
   static let shared = ConversationManager()
-  private let objectUser = ObjectUser()
   
-  
-  @UserDefaultsService(.isFirstLaunch) var conversations: ObjectConversation?
-  
+  //MARK: Private properties
   private let service = FirestoreService()
   
   private init() {}
   
 }
 
-//MARK: Conversations
-  
+//MARK: Public Methods
 extension ConversationManager {
-  
   func observeConversations(_ completion: @escaping (NetworkStatus<[ObjectConversation]>) -> Void) {
     service.observe(type: ObjectConversation.self, path: .conversations) { response in
       switch response {
-      case.success(let users):
-        let user = users?.filter({$0.id == (self.conversations?.id ?? "" )})
-        print("printme")
-        completion(.success(user))
-      case .noConnection:
-        completion(.noConnection)
-      case.generalError:
-        completion(.generalError)
+        case.success(let conversations):
+          guard let userId = Usermanager.shared.currentUser?.id else { return }
+          let filteredConversations = conversations?.filter({$0.participantIds.contains(userId)})
+          completion(.success(filteredConversations))
+        case .noConnection:
+          completion(.noConnection)
+        case.generalError:
+          completion(.generalError)
       }
     }
   }
   
   func observeMessages(conversationId: String, _ completion: @escaping (NetworkStatus<[ObjectMessage]>) -> Void) {
-    service.observe(type: ObjectMessage.self, path: .users) { response in
+    service.observe(type: ObjectMessage.self, path: .conversations, documentId: conversationId, secondPath: .messeges) { response in
       switch response {
-      case .success(let user):
-        let users = user?.filter({$0.reciepeintId != (self.conversations?.id ?? "" )})
-        print("print me tow")
-        completion(.success(users))
-      case .noConnection:
-        completion(.noConnection)
-      case .generalError:
-        completion(.generalError)
+        case .success(let messages):
+          completion(.success(messages))
+        case .noConnection:
+          completion(.noConnection)
+        case .generalError:
+          completion(.generalError)
       }
     }
-
   }
   
-  func send(_ message: ObjectMessage, _ completion: @escaping (NetworkStatus<Void>) -> Void) {
-//    service.read(type:ObjectMessage.self , path: .messeges) { response in
-//      switch response {
-//      case .success(let messege):
-//        let userMessege = messege?.filter({$0.message == (self.conversations?.lastMessage ?? "")})
-//        completion(.success(Void))
-//      }
-//    }
+  func send(_ message: ObjectMessage, conversationId: String, _ completion: @escaping (NetworkStatus<Void>) -> Void) {
+    service.set(message, documentId: conversationId, path: .conversations, secondPath: .messeges)  { response in
+      switch response {
+        case .success:
+          completion(.success(()))
+        case .noConnection:
+          completion(.noConnection)
+        case .generalError:
+          completion(.generalError)
+      }
+    }
   }
 }
-
-
-
