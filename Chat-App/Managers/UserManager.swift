@@ -102,5 +102,9 @@ extension Usermanager {
       }
     }
   }
+  
+  func editProfile() {
+    //TODO
+  }
 
 }
