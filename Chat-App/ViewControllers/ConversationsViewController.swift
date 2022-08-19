@@ -38,7 +38,6 @@ private extension ConversationsViewController {
   }
 }
 
-
 //MARK: Private methods
 private extension ConversationsViewController {
   func observeUsers() {
@@ -104,6 +103,23 @@ extension ConversationsViewController: UICollectionViewDelegateFlowLayout, UICol
         return collectionView.bounds.size
       case .normal:
         return CGSize(width: collectionView.bounds.width, height: 80)
+    }
+  }
+}
+
+//MARK: usercompose delegate
+extension ConversationsViewController: UserComposeViewControllerDelegate {
+  func show(conversationId: String) {
+    Coordinator.showMessages(conversationId: conversationId, from: self)
+  }
+  
+  func newConversation(userId: String) {
+    ConversationManager.shared.createConversation(participantId: userId) { response in
+      switch response {
+        case .success(let conversation):
+          Coordinator.showMessages(conversationId: conversation?.id ?? "", from: self)
+        default: break
+      }
     }
   }
 }

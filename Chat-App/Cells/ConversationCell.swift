@@ -23,9 +23,9 @@ final class ConversationCell: UICollectionViewCell {
   
     
   func configure(_ conversation: ObjectConversation) -> ConversationCell {
-    userNameLabel.text = conversation.id
-    lastMessage.text = conversation.lastMessage
-    userView.user = user
+//    userNameLabel.text = conversation.id
+//    lastMessage.text = conversation.lastMessage
+//    userView.user = user
     return self
   }
  

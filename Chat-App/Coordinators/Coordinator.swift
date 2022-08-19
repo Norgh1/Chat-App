@@ -28,8 +28,9 @@ final class Coordinator {
     vc.present(controller, animated: true)
   }
   
-  static func showCompose(from vc: UIViewController) {
-    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: UserComposeViewController.className)
+  static func showCompose(from vc: UserComposeViewControllerDelegate) {
+    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: UserComposeViewController.className) as! UserComposeViewController
+    controller.delegate = vc
     vc.present(controller, animated: true)
   }
   
