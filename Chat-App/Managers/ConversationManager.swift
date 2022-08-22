@@ -29,7 +29,7 @@ extension ConversationManager {
       switch response {
         case.success(let conversations):
           guard let userId = Usermanager.shared.currentUser?.id else { return }
-          let filteredConversations = conversations?.filter({$0.participantIds.contains(userId)})
+          let filteredConversations = conversations?.filter({$0.participantId.contains(userId)})
           completion(.success(filteredConversations))
         case .noConnection:
           completion(.noConnection)
@@ -44,7 +44,7 @@ extension ConversationManager {
       switch response {
         case.success(let conversations):
           guard let userId = Usermanager.shared.currentUser?.id else { return }
-          let filteredConversations = conversations?.filter({$0.participantIds.contains(userId)})
+          let filteredConversations = conversations?.filter({$0.participantId.contains(userId)})
           completion(.success(filteredConversations))
         case .noConnection:
           completion(.noConnection)
@@ -60,7 +60,7 @@ extension ConversationManager {
       return
     }
     let conversation = ObjectConversation()
-    conversation.participantIds = [userId, participantId]
+    conversation.participantId = [userId, participantId]
     service.set(conversation, path: .conversations) { response in
       switch response {
         case .success:

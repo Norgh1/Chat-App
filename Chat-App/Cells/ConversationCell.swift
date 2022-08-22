@@ -12,6 +12,8 @@ protocol ConversationCellDelegate: UIViewController {
   func didiSelect(_ conversation: ObjectConversation)
 }
 
+weak var delegate: ConversationCellDelegate?
+
 final class ConversationCell: UICollectionViewCell {
   
   //MARK: Private proparies
@@ -23,11 +25,10 @@ final class ConversationCell: UICollectionViewCell {
   
     
   func configure(_ conversation: ObjectConversation) -> ConversationCell {
-//    userNameLabel.text = conversation.id
-//    lastMessage.text = conversation.lastMessage
-//    userView.user = user
+    userNameLabel.text = conversation.id
+    lastMessage.text = conversation.lastMessage
+    userView.user = user
     return self
   }
- 
-}
+ }
 

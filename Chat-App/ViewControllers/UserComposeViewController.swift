@@ -36,8 +36,11 @@ final class UserComposeViewController: UIViewController {
       switch response {
         case .success(let users):
           self?.users = users ?? []
+        print(users!.count)
           self?.collectionView.reloadData()
-        default: break //TODO
+      case .generalError, .noConnection:
+        print(123)
+        //TODO
       }
     }
   }
@@ -47,6 +50,8 @@ final class UserComposeViewController: UIViewController {
       switch response {
         case .success(let conversations):
           self?.conversations = conversations ?? []
+        print(conversations!.count)
+          self?.collectionView.reloadData()
         case .noConnection:
           print(123)
         case .generalError:
@@ -54,24 +59,21 @@ final class UserComposeViewController: UIViewController {
       }
     }
   }
-  
-  //check if selected user already has a conversation
-  //if so show messages viewconroller
-  //otherwise create conversation and then show the messages viewconroller
 }
 
-extension UserComposeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension UserComposeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return users.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    return UICollectionViewCell()
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConversationCell.className, for: indexPath) as! ConversationCell
+    return cell.configure(conversations[indexPath.row])
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let user = users[indexPath.row]
-    if let conversation = conversations.filter({$0.participantIds.contains(user.id)}).first {
+    if let conversation = conversations.filter({$0.participantId.contains(user.id)}).first {
       delegate?.show(conversationId: conversation.id)
       return
     }
