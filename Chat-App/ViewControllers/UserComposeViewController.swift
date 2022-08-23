@@ -36,11 +36,11 @@ final class UserComposeViewController: UIViewController {
       switch response {
         case .success(let users):
           self?.users = users ?? []
-        print(users!.count)
           self?.collectionView.reloadData()
       case .generalError, .noConnection:
-        print(123)
-        //TODO
+          break
+          
+          //TODO
       }
     }
   }
@@ -50,12 +50,9 @@ final class UserComposeViewController: UIViewController {
       switch response {
         case .success(let conversations):
           self?.conversations = conversations ?? []
-        print(conversations!.count)
           self?.collectionView.reloadData()
-        case .noConnection:
-          print(123)
-        case .generalError:
-          print(123)
+        case .noConnection, .generalError:
+          break
       }
     }
   }
