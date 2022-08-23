@@ -126,25 +126,6 @@ extension ConversationsViewController: UserComposeViewControllerDelegate {
   }
 }
 
-//MARK: Messages delegate
-extension ConversationsViewController: MessagesViewControllerDelegate {
-  func create(_ userID: String) {
-    ConversationManager.shared.createConversation(participantId: userID) { response in
-      switch response {
-      case .success(let conversation):
-        Coordinator.showMessages(conversationId: conversation?.id ?? "" , from: self)
-      default: break
-      }
-    }
-  }
-  
-  func show(_ conversationID: String) {
-    Coordinator.showMessages(conversationId: conversationID, from: self)
-  }
-}
-
-
-
 //MARK: Models
 extension ConversationsViewController {
   enum Mode {
