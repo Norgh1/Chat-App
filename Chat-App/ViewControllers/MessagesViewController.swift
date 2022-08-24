@@ -37,9 +37,10 @@ private extension MessagesViewController {
         case.success(let messages):
           self?.messages = messages ?? []
           self?.collectionView.reloadData()
-        case.generalError, .noConnection:
-          //TODO show alerts
-          break
+        case .generalError:
+          self?.showAlert(title: "Attenation...!", message: "General Error")
+        case.noConnection:
+          self?.showAlert(title: "Attenation...!", message: "No Connection!")
       }
     }
   }
