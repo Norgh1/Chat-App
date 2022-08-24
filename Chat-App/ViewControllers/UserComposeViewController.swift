@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseFirestore
 
 protocol UserComposeViewControllerDelegate: UIViewController {
   func show(conversationId: String)
@@ -23,9 +22,13 @@ final class UserComposeViewController: UIViewController {
   //MARK: Private properties
   private var users = [ObjectUser]()
   private var conversations = [ObjectConversation]()
+  private var state: Mode = .inital {
+    willSet { collectionView.reloadData() }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    state = .normal
     fetchUsers()
     fetchConversations()
   }
@@ -37,10 +40,11 @@ final class UserComposeViewController: UIViewController {
         case .success(let users):
           self?.users = users ?? []
           self?.collectionView.reloadData()
-      case .generalError, .noConnection:
-          break
+        case .generalError:
+          self?.showAlert(title: "Attenation...!", message: "General Error")
+      case.noConnection:
+          self?.showAlert(title: "Attenation...!", message: "No Connection")
           
-          //TODO
       }
     }
   }
@@ -51,8 +55,10 @@ final class UserComposeViewController: UIViewController {
         case .success(let conversations):
           self?.conversations = conversations ?? []
           self?.collectionView.reloadData()
-        case .noConnection, .generalError:
-          break
+        case .generalError:
+          self?.showAlert(title: "Attenation...!", message: "General Error")
+        case.noConnection:
+          self?.showAlert(title: "Attenation...!", message: "No Connection")
       }
     }
   }
@@ -64,17 +70,38 @@ extension UserComposeViewController: UICollectionViewDataSource, UICollectionVie
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConversationCell.className, for: indexPath) as! ConversationCell
-    return cell.configure(conversations[indexPath.row])
+    switch state {
+    case .normal, .ok:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserComposeCell.className, for: indexPath) as! UserComposeCell
+      return cell.configure(conversations[indexPath.row])
+    case .inital, .noItems, .networkError:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceholderCell.className, for: indexPath) as! PlaceholderCell
+      return cell.configure(.inital)
+    }
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: collectionView.bounds.width, height: 120)
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let user = users[indexPath.row]
     if let conversation = conversations.filter({$0.participantId.contains(user.id)}).first {
       delegate?.show(conversationId: conversation.id)
+      dismiss(animated: true)
       return
     }
     delegate?.newConversation(userId: user.id)
     dismiss(animated: true)
+  }
+}
+//MARK: Model
+private extension UserComposeViewController{
+  enum Mode {
+    case inital
+    case noItems
+    case normal
+    case ok
+    case networkError
   }
 }
