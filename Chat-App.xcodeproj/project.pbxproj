@@ -47,6 +47,7 @@
 		FBCA21632892857B005B6722 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA21622892857B005B6722 /* Coordinator.swift */; };
 		FBCA2166289285B3005B6722 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA2165289285B3005B6722 /* NSObjectExtension.swift */; };
 		FBCA2169289288FA005B6722 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA2168289288FA005B6722 /* SliderView.swift */; };
+		FBCD2E1428B6A424000ACBDB /* UserComposeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCD2E1328B6A424000ACBDB /* UserComposeCell.swift */; };
 		FBF1D4DB28927A8D008C64C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DA28927A8D008C64C3 /* AppDelegate.swift */; };
 		FBF1D4DD28927A8D008C64C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DC28927A8D008C64C3 /* SceneDelegate.swift */; };
 		FBF1D4DF28927A8D008C64C3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D4DE28927A8D008C64C3 /* OnboardingViewController.swift */; };
@@ -91,6 +92,7 @@
 		FBCA21622892857B005B6722 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FBCA2165289285B3005B6722 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		FBCA2168289288FA005B6722 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		FBCD2E1328B6A424000ACBDB /* UserComposeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserComposeCell.swift; sourceTree = "<group>"; };
 		FBF1D4D728927A8D008C64C3 /* Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF1D4DA28927A8D008C64C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF1D4DC28927A8D008C64C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCA215828928187005B6722 /* ConversationCell.swift */,
+				FBCD2E1328B6A424000ACBDB /* UserComposeCell.swift */,
 				77F4AF3E28ABE90700A92B54 /* UsersCell.swift */,
 				77E8BBBE28ABF37F005FE79D /* UserSingleCell.swift */,
 				77F4AF3C28ABE8F800A92B54 /* PlaceholderCell.swift */,
@@ -382,6 +385,7 @@
 				FBCA215928928187005B6722 /* ConversationCell.swift in Sources */,
 				7757E75028AD3725001698E3 /* UserComposeViewController.swift in Sources */,
 				FBCA215C28928246005B6722 /* ObjectUser.swift in Sources */,
+				FBCD2E1428B6A424000ACBDB /* UserComposeCell.swift in Sources */,
 				77E8BBBF28ABF37F005FE79D /* UserSingleCell.swift in Sources */,
 				FBF1D4DD28927A8D008C64C3 /* SceneDelegate.swift in Sources */,
 				77F4AF3F28ABE90700A92B54 /* UsersCell.swift in Sources */,
