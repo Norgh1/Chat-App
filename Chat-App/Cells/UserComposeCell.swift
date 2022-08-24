@@ -2,20 +2,26 @@
 //  UserComposeCell.swift
 //  Chat-App
 //
-//  Created by Nor Gh on 20.08.22.
+//  Created by Nor Gh on 24.08.22.
 //
 
 import UIKit
 
-class UserComposeCell: UICollectionViewCell {
-    
-  @IBOutlet weak var view: UserView!
-  @IBOutlet weak var userNameLabel: UILabel!
+final class UserComposeCell: UICollectionViewCell {
   
-  func configure(_ user: ObjectUser) -> UserComposeCell {
-    view.user = user
-    userNameLabel.text = user.name
+  //MARK: Private properties
+  private var user = ObjectUser()
+  
+  //MARK: Outlets
+  @IBOutlet weak var userView: UserView!
+  @IBOutlet weak var userNameLabel: UILabel!
+  @IBOutlet weak var lastMessage: UILabel!
+  
+    
+  func configure(_ conversation: ObjectConversation) -> UserComposeCell {
+    userNameLabel.text = conversation.id
+    lastMessage.text = conversation.lastMessage
+    userView.user = user
     return self
   }
-  
 }
