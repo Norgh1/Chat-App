@@ -23,7 +23,7 @@ final class UserComposeViewController: UIViewController {
   private var users = [ObjectUser]()
   private var conversations = [ObjectConversation]()
   private var state: Mode = .inital {
-    willSet { collectionView.reloadData() }
+    didSet { collectionView.reloadData() }
   }
   
   override func viewDidLoad() {
@@ -71,17 +71,21 @@ extension UserComposeViewController: UICollectionViewDataSource, UICollectionVie
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     switch state {
-    case .normal, .ok:
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserComposeCell.className, for: indexPath) as! UserComposeCell
-      return cell.configure(conversations[indexPath.row])
-    case .inital, .noItems, .networkError:
+    case.inital, .noItems, .networkError:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceholderCell.className, for: indexPath) as! PlaceholderCell
       return cell.configure(.inital)
+    case.normal:
+      guard indexPath.row != 0 else {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UsersCell.className, for: indexPath) as! UsersCell
+        return cell.configure(users)
+      }
     }
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserComposeCell.className, for: indexPath) as! UserComposeCell
+    return cell.configure(conversations[indexPath.row])
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: collectionView.bounds.width, height: 120)
+    return CGSize(width: collectionView.bounds.width, height: 90)
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -101,7 +105,6 @@ private extension UserComposeViewController{
     case inital
     case noItems
     case normal
-    case ok
     case networkError
   }
 }

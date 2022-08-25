@@ -26,6 +26,7 @@ final class MessagesViewController: UIViewController {
     super.viewDidLoad()
     state = .normal
     observeMessages()
+    setupKeyboardHiding()
   }
 }
 
@@ -48,7 +49,7 @@ private extension MessagesViewController {
   @IBAction func sendPressed() {
     guard let messageText = textField.text else { return }
     let message = ObjectMessage()
-    message.recipientIds = "asdgasdg"//Usermanager.shared.currentUser?.id ?? ""
+    message.recipientIds = ""//Usermanager.shared.currentUser?.id ?? ""
     message.messageType = .text
     message.content = messageText
     ConversationManager.shared.send(message, conversationId: conversationId) { response in
@@ -97,14 +98,31 @@ extension MessagesViewController: UICollectionViewDelegateFlowLayout, UICollecti
   }
 }
 
-
 //MARK: TextFiled methods
 extension MessagesViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     return textField.resignFirstResponder()
   }
 }
-
+//MARK: TextFiled_show_hide
+extension MessagesViewController {
+  private func setupKeyboardHiding() {
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(kayboardWillShow),
+                                           name: UIResponder.keyboardWillShowNotification,
+                                           object: nil)
+    NotificationCenter.default.addObserver(self,
+                                           selector: #selector(keyboardWillHide),
+                                           name: UIResponder.keyboardWillHideNotification,
+                                           object: nil)
+  }
+  @objc func kayboardWillShow() {
+    view.frame.origin.y = view.frame.origin.y - 175
+  }
+  @objc func keyboardWillHide(){
+    view.frame.origin.y = 0
+  }
+}
 //MARK: Models
 extension MessagesViewController {
   enum Mode {
@@ -114,3 +132,4 @@ extension MessagesViewController {
     case networkError
   }
 }
+

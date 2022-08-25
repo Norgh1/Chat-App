@@ -20,6 +20,10 @@ final class UsersCell: UICollectionViewCell {
   //MARK: Public properties
   weak var delegate: UsersCellDelegate?
   
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    collectionView.frame = contentView.bounds
+  }
   override func awakeFromNib() {
     super.awakeFromNib()
     collectionView.delegate = self
