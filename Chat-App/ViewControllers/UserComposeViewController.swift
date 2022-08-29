@@ -66,6 +66,7 @@ final class UserComposeViewController: UIViewController {
 
 extension UserComposeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    self.collectionView.reloadData()
     return users.count
   }
   
@@ -77,11 +78,11 @@ extension UserComposeViewController: UICollectionViewDataSource, UICollectionVie
     case.normal:
       guard indexPath.row != 0 else {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UsersCell.className, for: indexPath) as! UsersCell
-        return cell.configure(users)
+      return cell.configure(users)
       }
     }
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserComposeCell.className, for: indexPath) as! UserComposeCell
-    return cell.configure(conversations[indexPath.row])
+    return cell.configure(users[indexPath.row - 1])
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

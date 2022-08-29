@@ -25,9 +25,6 @@ final class ConversationsViewController: UIViewController {
     observeUsers()
     observeConversations()
   }
-  override func viewDidLayoutSubviews() {
-    
-  }
 }
 
 //MARK: IBActions
@@ -90,7 +87,7 @@ extension ConversationsViewController: UICollectionViewDelegateFlowLayout, UICol
           return cell.configure(users)
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ConversationCell.className, for: indexPath) as! ConversationCell
-        return cell.configure(conversations[indexPath.row - 1])
+      return cell.configure(conversations[indexPath.row - 1])
     }
   }
   
@@ -105,7 +102,7 @@ extension ConversationsViewController: UICollectionViewDelegateFlowLayout, UICol
       case .networkError, .inital, .noItems:
         return collectionView.bounds.size
       case .normal:
-        return CGSize(width: collectionView.bounds.width, height: 100)
+        return CGSize(width: collectionView.bounds.width, height: 80)
     }
   }
 }

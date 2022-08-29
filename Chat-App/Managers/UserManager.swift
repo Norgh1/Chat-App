@@ -103,8 +103,9 @@ extension Usermanager {
     }
   }
   
-  func editProfile() {
-    //TODO
+
+  
+  func editProfile(_ complition: @escaping (NetworkStatus<[ObjectUser]>) -> Void) {
   }
 
 }

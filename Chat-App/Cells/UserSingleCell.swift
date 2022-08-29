@@ -17,7 +17,7 @@ final class UserSingleCell: UICollectionViewCell {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-      userView.frame = contentView.bounds
+    userView.frame = contentView.bounds
   }
   
   func configure(_ user: ObjectUser) -> UserSingleCell {
@@ -30,11 +30,6 @@ final class UserSingleCell: UICollectionViewCell {
 
 extension UserSingleCell {
   private func configureUI(){
-    
-    
     userNameLabel.font = .boldSystemFont(ofSize: 15)
-    userView.translatesAutoresizingMaskIntoConstraints = false
-    userView.clipsToBounds = true
-    userView.backgroundColor = .systemGray6
   }
 }

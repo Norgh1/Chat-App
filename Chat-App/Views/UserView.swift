@@ -16,7 +16,7 @@ final class UserView: UIView {
   }
   
   //MARK: Private properties
-  let imageView = UIImageView()
+  var imageView = UIImageView()
   let statusView = UIView()
   
   //MARK: Inits
@@ -32,7 +32,7 @@ final class UserView: UIView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    layer.cornerRadius = bounds.height / 2
+    layer.cornerRadius = frame.size.height / 2
   }
 }
 
@@ -50,6 +50,7 @@ private extension UserView {
   }
   
   func commonInit() {
+    //layer.cornerRadius = frame.size.width / 2
     backgroundColor = .systemGray6
     clipsToBounds = true
     

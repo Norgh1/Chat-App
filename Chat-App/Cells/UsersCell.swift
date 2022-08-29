@@ -38,7 +38,7 @@ final class UsersCell: UICollectionViewCell {
 }
 
 //MARK: Collectionview methods
-extension UsersCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension UsersCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return users.count
   }
