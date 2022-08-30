@@ -12,7 +12,7 @@ final class PlaceholderCell: UICollectionViewCell {
   @IBOutlet weak var spinner: UIActivityIndicatorView!
   @IBOutlet weak var imageView: UIImageView!
   
-  func configure(_ mode: ConversationsViewController.Mode) -> PlaceholderCell {
+  func configure(_ mode: State) -> PlaceholderCell {
     switch mode {
       case .inital:
         spinner.startAnimating()

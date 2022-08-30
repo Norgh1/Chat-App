@@ -31,6 +31,8 @@ final class Coordinator {
   static func showCompose(from vc: UserComposeViewControllerDelegate) {
     let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: UserComposeViewController.className) as! UserComposeViewController
     controller.delegate = vc
+    controller.modalPresentationStyle = .overFullScreen
+    controller.modalTransitionStyle = .crossDissolve
     vc.present(controller, animated: true)
   }
   

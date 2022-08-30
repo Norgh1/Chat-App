@@ -51,4 +51,8 @@ extension UsersCell: UICollectionViewDelegate, UICollectionViewDataSource, UICol
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     delegate?.didSelect(users[indexPath.row])
   }
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let size = collectionView.frame.width / 4
+    return CGSize(width: size, height: 70)
+  }
 }

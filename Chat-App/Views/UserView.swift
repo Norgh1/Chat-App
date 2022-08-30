@@ -55,8 +55,8 @@ private extension UserView {
     clipsToBounds = true
     
     addSubview(imageView)
-    imageView.pinEdgesToSuperView(leading: 10, trailing: -10, top: 10, bottom: -10)
-    imageView.contentMode = .scaleAspectFit
+    imageView.pinEdgesToSuperView(leading: 0, trailing: 0, top: 0, bottom: 0)
+    imageView.contentMode = .scaleAspectFill
     statusView.backgroundColor = .systemGreen
     addSubview(statusView)
     statusView.pinEdgesToSuperView(leading: nil, trailing: 0, top: nil, bottom: 0)
