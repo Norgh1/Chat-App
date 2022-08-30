@@ -102,7 +102,7 @@ extension ConversationsViewController: UICollectionViewDelegateFlowLayout, UICol
       case .networkError, .inital, .noItems:
         return collectionView.bounds.size
       case .normal:
-        return CGSize(width: collectionView.bounds.width, height: 80)
+        return CGSize(width: collectionView.bounds.width, height: 90)
     }
   }
 }

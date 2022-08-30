@@ -521,18 +521,20 @@
                                                                             <constraint firstAttribute="width" secondItem="x0x-C1-sZz" secondAttribute="height" multiplier="7:6" id="DXK-vA-2RF"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idz-AM-M9d">
-                                                                        <rect key="frame" x="17" y="48" width="42" height="21"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idz-AM-M9d">
+                                                                        <rect key="frame" x="17.000000000000004" y="36" width="41.333333333333343" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Idz-AM-M9d" secondAttribute="trailing" id="N00-YW-DW9"/>
                                                                     <constraint firstAttribute="trailing" secondItem="x0x-C1-sZz" secondAttribute="trailing" constant="17" id="Px2-wu-8Ya"/>
+                                                                    <constraint firstItem="Idz-AM-M9d" firstAttribute="top" secondItem="x0x-C1-sZz" secondAttribute="bottom" id="V7Q-4E-vd4"/>
                                                                     <constraint firstItem="x0x-C1-sZz" firstAttribute="top" secondItem="hJJ-Tk-QyV" secondAttribute="top" id="dVe-Mg-CHw"/>
                                                                     <constraint firstItem="x0x-C1-sZz" firstAttribute="leading" secondItem="hJJ-Tk-QyV" secondAttribute="leading" constant="17" id="oem-sF-XjQ"/>
+                                                                    <constraint firstItem="Idz-AM-M9d" firstAttribute="leading" secondItem="hJJ-Tk-QyV" secondAttribute="leading" constant="17" id="qtw-5N-V85"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="76" height="77"/>
