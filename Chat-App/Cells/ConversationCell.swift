@@ -28,7 +28,6 @@ final class ConversationCell: UICollectionViewCell {
   func configure(_ conversation: ObjectConversation) -> ConversationCell {
     userNameLabel.text = conversation.id
     lastMessage.text = conversation.lastMessage
-    //userView.imageView = UIImageView(image: UIImage(named: user.profileImageURL ?? ""))
     return self
   }
  }

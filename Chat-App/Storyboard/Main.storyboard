@@ -522,7 +522,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idz-AM-M9d">
-                                                                        <rect key="frame" x="17.000000000000004" y="36" width="41.333333333333343" height="21"/>
+                                                                        <rect key="frame" x="15.000000000000004" y="41" width="41.333333333333343" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -531,10 +531,10 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Idz-AM-M9d" secondAttribute="trailing" id="N00-YW-DW9"/>
                                                                     <constraint firstAttribute="trailing" secondItem="x0x-C1-sZz" secondAttribute="trailing" constant="17" id="Px2-wu-8Ya"/>
-                                                                    <constraint firstItem="Idz-AM-M9d" firstAttribute="top" secondItem="x0x-C1-sZz" secondAttribute="bottom" id="V7Q-4E-vd4"/>
+                                                                    <constraint firstItem="Idz-AM-M9d" firstAttribute="top" secondItem="x0x-C1-sZz" secondAttribute="bottom" constant="5" id="V7Q-4E-vd4"/>
                                                                     <constraint firstItem="x0x-C1-sZz" firstAttribute="top" secondItem="hJJ-Tk-QyV" secondAttribute="top" id="dVe-Mg-CHw"/>
                                                                     <constraint firstItem="x0x-C1-sZz" firstAttribute="leading" secondItem="hJJ-Tk-QyV" secondAttribute="leading" constant="17" id="oem-sF-XjQ"/>
-                                                                    <constraint firstItem="Idz-AM-M9d" firstAttribute="leading" secondItem="hJJ-Tk-QyV" secondAttribute="leading" constant="17" id="qtw-5N-V85"/>
+                                                                    <constraint firstItem="Idz-AM-M9d" firstAttribute="leading" secondItem="hJJ-Tk-QyV" secondAttribute="leading" constant="15" id="qtw-5N-V85"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="76" height="77"/>
@@ -560,19 +560,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="244" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJm-CW-HRQ" customClass="UserView" customModule="Chat_App" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="24" width="54" height="57"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conversations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SO-fP-EBg">
-                                                    <rect key="frame" x="66" y="37" width="109" height="21"/>
+                                                    <rect key="frame" x="83" y="31" width="109" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJm-CW-HRQ" customClass="UserView" customModule="Chat_App" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="31" width="46" height="42"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUC-TE-zOf">
-                                                    <rect key="frame" x="68" y="61" width="109" height="21"/>
+                                                    <rect key="frame" x="83" y="52" width="109" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -580,6 +579,12 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="FJm-CW-HRQ" secondAttribute="bottom" constant="24" id="CjX-A8-1KU"/>
+                                                <constraint firstItem="FJm-CW-HRQ" firstAttribute="leading" secondItem="ELN-zO-cVt" secondAttribute="leading" constant="10" id="DTk-CJ-SHW"/>
+                                                <constraint firstItem="FJm-CW-HRQ" firstAttribute="width" secondItem="ELN-zO-cVt" secondAttribute="height" multiplier="18:35" id="XQi-8y-Di5"/>
+                                                <constraint firstItem="FJm-CW-HRQ" firstAttribute="top" secondItem="ELN-zO-cVt" secondAttribute="top" constant="24" id="qxC-1N-aqu"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="244" height="105"/>
                                         <connections>
