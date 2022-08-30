@@ -22,6 +22,8 @@
 		77F4AF4528ABEB5A00A92B54 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 77F4AF4428ABEB5A00A92B54 /* Kingfisher */; };
 		FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697128996CCB00F8BA7F /* SegmentedView.swift */; };
 		FB26697428996D0200F8BA7F /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26697328996D0200F8BA7F /* MainButton.swift */; };
+		FB3165D628BD0FF0000152FA /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3165D528BD0FF0000152FA /* State.swift */; };
+		FB3165D828BE0E58000152FA /* ImagePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3165D728BE0E57000152FA /* ImagePickerService.swift */; };
 		FB44AB4928A3F74C001501CD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44AB4828A3F74C001501CD /* StringExtension.swift */; };
 		FB44AB4B28A3F7BA001501CD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB44AB4A28A3F7BA001501CD /* UIViewControllerExtension.swift */; };
 		FB44AB4D28A40258001501CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB44AB4C28A40258001501CD /* GoogleService-Info.plist */; };
@@ -70,6 +72,8 @@
 		77F4AF4128ABE9BB00A92B54 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		FB26697128996CCB00F8BA7F /* SegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedView.swift; sourceTree = "<group>"; };
 		FB26697328996D0200F8BA7F /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		FB3165D528BD0FF0000152FA /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		FB3165D728BE0E57000152FA /* ImagePickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerService.swift; sourceTree = "<group>"; };
 		FB44AB4828A3F74C001501CD /* StringExtension.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; tabWidth = 2; };
 		FB44AB4A28A3F7BA001501CD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		FB44AB4C28A40258001501CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -117,12 +121,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		778246E328A55A2500DB3260 /* Protocls */ = {
+		778246E328A55A2500DB3260 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				778246E128A55A2100DB3260 /* Identifiable.swift */,
 			);
-			path = Protocls;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		77F4AF4028ABE91E00A92B54 /* Cells */ = {
@@ -136,6 +140,15 @@
 				779364C528B5249D00E695DA /* MessageCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FB3165D428BD0FDA000152FA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */,
+				FB3165D528BD0FF0000152FA /* State.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		FBCA214428927EAF005B6722 /* ViewControllers */ = {
@@ -175,6 +188,7 @@
 			children = (
 				FBCA215528928158005B6722 /* UserDefaultsService.swift */,
 				778246DF28A5561A00DB3260 /* FirestoreService.swift */,
+				FB3165D728BE0E57000152FA /* ImagePickerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -252,8 +266,9 @@
 				FBCA215428928143005B6722 /* Managers */,
 				FBCA21572892815F005B6722 /* Services */,
 				FBCA215D2892824A005B6722 /* Models */,
-				778246E328A55A2500DB3260 /* Protocls */,
+				778246E328A55A2500DB3260 /* Protocols */,
 				FBCA2167289285C3005B6722 /* Extensions */,
+				FB3165D428BD0FDA000152FA /* Enums */,
 				FBF1D4EE28927E15008C64C3 /* Application */,
 			);
 			path = "Chat-App";
@@ -264,7 +279,6 @@
 			children = (
 				FBF1D4DA28927A8D008C64C3 /* AppDelegate.swift */,
 				FBF1D4DC28927A8D008C64C3 /* SceneDelegate.swift */,
-				77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */,
 				FBF1D4E328927A8E008C64C3 /* Assets.xcassets */,
 				FBF1D4E528927A8E008C64C3 /* LaunchScreen.storyboard */,
 				FB44AB4C28A40258001501CD /* GoogleService-Info.plist */,
@@ -361,6 +375,7 @@
 				77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */,
 				FB7CF1B528940AA600B66C78 /* UIViewExtensions.swift in Sources */,
 				FBCA2166289285B3005B6722 /* NSObjectExtension.swift in Sources */,
+				FB3165D828BE0E58000152FA /* ImagePickerService.swift in Sources */,
 				77F4AF3D28ABE8F800A92B54 /* PlaceholderCell.swift in Sources */,
 				FBCA215628928159005B6722 /* UserDefaultsService.swift in Sources */,
 				FB26697428996D0200F8BA7F /* MainButton.swift in Sources */,
@@ -380,6 +395,7 @@
 				7757E75228AD374C001698E3 /* MessagesViewController.swift in Sources */,
 				FB26697228996CCB00F8BA7F /* SegmentedView.swift in Sources */,
 				FBCA215328928094005B6722 /* ConversationManager.swift in Sources */,
+				FB3165D628BD0FF0000152FA /* State.swift in Sources */,
 				77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */,
 				FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */,
 				FBCA215928928187005B6722 /* ConversationCell.swift in Sources */,

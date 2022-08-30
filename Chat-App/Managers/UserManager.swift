@@ -9,6 +9,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import UIKit
 
 final class Usermanager {
   
@@ -25,7 +26,6 @@ final class Usermanager {
 
 //MARK: Authentication
 extension Usermanager {
-  
   func signin(email: String, password: String, _ completion: @escaping (NetworkStatus<Void>) -> Void) {
     Auth.auth().signIn(withEmail: email, password: password) { result, error in
       guard let userId = result?.user.uid else { completion(.generalError); return }
@@ -103,9 +103,21 @@ extension Usermanager {
     }
   }
   
-
-  
-  func editProfile(_ complition: @escaping (NetworkStatus<[ObjectUser]>) -> Void) {
+  func editProfile(user: ObjectUser, _ complition: @escaping (NetworkStatus<Void>) -> Void) {
+    service.set(user.self, path: .users) { response in
+      switch response {
+      case.generalError:
+        complition(.generalError)
+      case.noConnection:
+        complition(.noConnection)
+      case.success(_):
+        if let myData = Usermanager.shared.currentUser?.profileImageURL as? String {
+          self.currentUser?.profileImageURL = myData
+          complition(.success(()))
+        }
+      }
+    }
   }
-
 }
+
+

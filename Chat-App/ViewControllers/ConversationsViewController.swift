@@ -15,7 +15,7 @@ final class ConversationsViewController: UIViewController {
   //MARK: Private properties
   private var users = [ObjectUser]()
   private var conversations = [ObjectConversation]()
-  private var state: Mode = .inital {
+  private var state: State = .inital {
     didSet { collectionView.reloadData() }
   }
   
@@ -121,15 +121,5 @@ extension ConversationsViewController: UserComposeViewControllerDelegate {
         default: break
       }
     }
-  }
-}
-
-//MARK: Models
-extension ConversationsViewController {
-  enum Mode {
-    case inital
-    case noItems
-    case normal
-    case networkError
   }
 }

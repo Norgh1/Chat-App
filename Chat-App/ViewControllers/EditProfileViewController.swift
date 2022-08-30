@@ -10,35 +10,57 @@ import UIKit
 final class EditProfileViewController: UIViewController {
   //MARK: IBOutlets
   @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var button: UIButton!
+  @IBOutlet weak var nameTextField: UITextField!
+  @IBOutlet weak var lastNameTextField: UITextField!
+  
+  //MARK: private properties
+  private var users = ObjectUser()
   
   //MARK: IBAction logout
-  @IBAction func buttonPressed() {
-    Coordinator.showOnboarding()
+    @IBAction func logoutPressed() {
+      Usermanager.shared.logout { response in
+        guard case .success = response else { return }
+        Coordinator.showOnboarding()
+      }
+    }
+  
+  @IBAction func imagePressed() {
+    //TODO
+    setupPicker()
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    configureUserImage()
-    configureButton()
+    setUserdata()
   }
-  
 }
 
 //MARK: User image
 private extension EditProfileViewController {
-  private func configureUserImage() {
-    imageView.clipsToBounds = true
-    imageView.contentMode = .scaleAspectFit
-    imageView.image = UIImage(named: Usermanager.shared.currentUser?.profileImageURL ?? "")
-    let url = URL(string: "https://cultivatedculture.com/wp-content/uploads/2019/12/LinkedIn-Profile-Picture-Example-Rachel-Montan%CC%83ez.jpeg")
-    imageView.kf.setImage(with: url)
+  private func setUserdata() {
+    nameTextField.text = Usermanager.shared.currentUser?.name
+    lastNameTextField.text = Usermanager.shared.currentUser?.lastName
+    imageView.kf.setImage(with: URL(string: Usermanager.shared.currentUser?.profileImageURL ?? ""))
+  }
+}
+//MARK: UIImagePicker Delegate
+extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    if let mydata = info[UIImagePickerController.InfoKey(rawValue: users.profileImageURL ?? "")] as? String {
+      print("\(mydata)")
+      imageView.kf.setImage(with: URL(string: users.profileImageURL ?? "" ))
+    }
+    dismiss(animated: true)
   }
 }
 
-//MARK: LogOut button
-private extension EditProfileViewController{
-  private func configureButton() {
-    button.setImage(UIImage(systemName: "rectangle.portrait.and.arrow.right"), for: .normal)
+//MARK: Edite photo picker
+private extension EditProfileViewController {
+  private func setupPicker(){
+    let picker = UIImagePickerController()
+    picker.sourceType = .photoLibrary
+    picker.delegate = self
+    picker.allowsEditing = true
+    present(picker, animated: true)
   }
 }

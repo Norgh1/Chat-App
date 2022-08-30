@@ -16,6 +16,10 @@ final class ObjectUser: Identifiable {
   var profileImageURL: String?
   var isActive = false
   
+  var fullName: String {
+    return "\(name ?? "") \(lastName ?? "")"
+  }
+  
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     id = try container.decode(String.self, forKey: .id)

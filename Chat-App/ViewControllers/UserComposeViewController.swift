@@ -12,7 +12,6 @@ protocol UserComposeViewControllerDelegate: UIViewController {
   func newConversation(userId: String)
 }
 
-
 final class UserComposeViewController: UIViewController {
   
   @IBOutlet weak var collectionView: UICollectionView!
@@ -22,16 +21,21 @@ final class UserComposeViewController: UIViewController {
   //MARK: Private properties
   private var users = [ObjectUser]()
   private var conversations = [ObjectConversation]()
-  private var state: Mode = .inital {
+  private var state: State = .inital {
     didSet { collectionView.reloadData() }
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 120, right: 0)
     state = .normal
     fetchUsers()
     fetchConversations()
   }
+    
+    @IBAction func closePressed() {
+        dismiss(animated: true)
+    }
   
   //MARK: Conversations
   func fetchUsers() {
@@ -64,9 +68,9 @@ final class UserComposeViewController: UIViewController {
   }
 }
 
-extension UserComposeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension UserComposeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    self.collectionView.reloadData()
     return users.count
   }
   
@@ -74,19 +78,16 @@ extension UserComposeViewController: UICollectionViewDataSource, UICollectionVie
     switch state {
     case.inital, .noItems, .networkError:
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaceholderCell.className, for: indexPath) as! PlaceholderCell
-      return cell.configure(.inital)
+      return cell.configure(state)
     case.normal:
-      guard indexPath.row != 0 else {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UsersCell.className, for: indexPath) as! UsersCell
-      return cell.configure(users)
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserComposeCell.className, for: indexPath) as! UserComposeCell
+      return cell.configure(users[indexPath.row])
       }
     }
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserComposeCell.className, for: indexPath) as! UserComposeCell
-    return cell.configure(users[indexPath.row - 1])
-  }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: collectionView.bounds.width, height: 90)
+    let width = collectionView.bounds.width / 4
+    return CGSize(width: width, height: width + 30)
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -98,14 +99,5 @@ extension UserComposeViewController: UICollectionViewDataSource, UICollectionVie
     }
     delegate?.newConversation(userId: user.id)
     dismiss(animated: true)
-  }
-}
-//MARK: Model
-private extension UserComposeViewController{
-  enum Mode {
-    case inital
-    case noItems
-    case normal
-    case networkError
   }
 }
