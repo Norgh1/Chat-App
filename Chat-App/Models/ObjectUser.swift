@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import FirebaseFirestoreSwift
+import UIKit
 
 final class ObjectUser: Identifiable {  
   var id = UUID().uuidString
@@ -15,6 +15,8 @@ final class ObjectUser: Identifiable {
   var email: String?
   var profileImageURL: String?
   var isActive = false
+  
+  var image: UIImage?
   
   var fullName: String {
     return "\(name ?? "") \(lastName ?? "")"

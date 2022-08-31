@@ -6,9 +6,6 @@
 //
 
 import Foundation
-import FirebaseFirestoreSwift
-
-
 
 protocol Identifiable : Codable {
   var id: String { get set }

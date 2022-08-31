@@ -8,25 +8,25 @@
 import Foundation
 import UIKit
 
-final class ImagePickerService {
+final class ImagePickerService: NSObject {
   
-  static let imagePicker = ImagePickerService()
+  private let imagePicker = UIImagePickerController()
+  private var completion: ((UIImage) -> Void)?
   
-  func showImagePickerController(sourceType: UIImagePickerController.SourceType) {
-    let imagePicker = UIImagePickerController()
+  func show(sourceType: UIImagePickerController.SourceType, from controller: UIViewController, completion: @escaping (UIImage) -> Void) {
     imagePicker.sourceType = sourceType
     imagePicker.allowsEditing = true
-    //imagePicker.delegate = Self
-    
+    imagePicker.delegate = self
+    self.completion = completion
+    controller.present(imagePicker, animated: true)
   }
-//  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//    if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-//      
-//    }
-//    
-//  }
 }
 
-
-
-
+extension ImagePickerService: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    if let image = info[.editedImage] as? UIImage {
+      completion?(image)
+    }
+    picker.dismiss(animated: true)
+  }
+}

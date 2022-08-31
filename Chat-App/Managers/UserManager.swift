@@ -19,6 +19,7 @@ final class Usermanager {
   
   //MARK: Private properties
   private let service = FirestoreService()
+  private let storageService = FireStorageService()
   
   private init() {}
   
@@ -55,7 +56,6 @@ extension Usermanager {
       user.name = name
       user.lastName = lastName
       user.email = email
-      
       self.service.set(user, path: .users) { status in
         self.currentUser = user
         completion(status)
@@ -104,17 +104,36 @@ extension Usermanager {
   }
   
   func editProfile(user: ObjectUser, _ complition: @escaping (NetworkStatus<Void>) -> Void) {
+    if let image = user.image {
+      storageService.set(data: image.jpegData(compressionQuality: 1.0)!, name: user.id + ".jpg") { response in
+        guard case .success(let url) = response else {
+          complition(.generalError)
+          return
+        }
+        user.profileImageURL = url
+        self.service.set(user.self, path: .users) { response in
+          switch response {
+            case.generalError:
+              complition(.generalError)
+            case.noConnection:
+              complition(.noConnection)
+            case.success:
+              self.currentUser = user
+              complition(.success(()))
+          }
+        }
+      }
+      return
+    }
     service.set(user.self, path: .users) { response in
       switch response {
-      case.generalError:
-        complition(.generalError)
-      case.noConnection:
-        complition(.noConnection)
-      case.success(_):
-        if let myData = Usermanager.shared.currentUser?.profileImageURL as? String {
-          self.currentUser?.profileImageURL = myData
+        case.generalError:
+          complition(.generalError)
+        case.noConnection:
+          complition(.noConnection)
+        case.success:
+          self.currentUser = user
           complition(.success(()))
-        }
       }
     }
   }

@@ -13,14 +13,6 @@ final class FirestoreService {
   
   private let db = Firestore.firestore()
   
-  //MARK: Set l.m.
-//  func setLastMessage<T: Identifiable>(_ object: T, lastMessage: String, path: CollectionPath, _ completion: @escaping (NetworkStatus<Void>) -> Void) -> Void {
-//    do {
-//      let _ = try db.collection(path.rawValue).document(object.id)
-//    }
-//  }
-  
-  
   //MARK: Set
   func set<T: Identifiable>(_ object: T, path: CollectionPath, _ completion: @escaping (NetworkStatus<Void>) -> Void) {
     do {

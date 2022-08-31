@@ -16,6 +16,7 @@
 		77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8128A2ACE10093D9B2 /* UserManager.swift */; };
 		77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */; };
 		77E8BBBF28ABF37F005FE79D /* UserSingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E8BBBE28ABF37F005FE79D /* UserSingleCell.swift */; };
+		77EF1EE728BF7E3100D5E19E /* FireStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EF1EE628BF7E3100D5E19E /* FireStorageService.swift */; };
 		77F4AF3D28ABE8F800A92B54 /* PlaceholderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4AF3C28ABE8F800A92B54 /* PlaceholderCell.swift */; };
 		77F4AF3F28ABE90700A92B54 /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4AF3E28ABE90700A92B54 /* UsersCell.swift */; };
 		77F4AF4228ABE9BB00A92B54 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4AF4128ABE9BB00A92B54 /* UserView.swift */; };
@@ -67,6 +68,7 @@
 		77CF7C8128A2ACE10093D9B2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		77E8BBBE28ABF37F005FE79D /* UserSingleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleCell.swift; sourceTree = "<group>"; };
+		77EF1EE628BF7E3100D5E19E /* FireStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStorageService.swift; sourceTree = "<group>"; };
 		77F4AF3C28ABE8F800A92B54 /* PlaceholderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderCell.swift; sourceTree = "<group>"; };
 		77F4AF3E28ABE90700A92B54 /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
 		77F4AF4128ABE9BB00A92B54 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				FBCA215528928158005B6722 /* UserDefaultsService.swift */,
 				778246DF28A5561A00DB3260 /* FirestoreService.swift */,
+				77EF1EE628BF7E3100D5E19E /* FireStorageService.swift */,
 				FB3165D728BE0E57000152FA /* ImagePickerService.swift */,
 			);
 			path = Services;
@@ -400,6 +403,7 @@
 				FBCA214B28927FE3005B6722 /* ConversationsViewController.swift in Sources */,
 				FBCA215928928187005B6722 /* ConversationCell.swift in Sources */,
 				7757E75028AD3725001698E3 /* UserComposeViewController.swift in Sources */,
+				77EF1EE728BF7E3100D5E19E /* FireStorageService.swift in Sources */,
 				FBCA215C28928246005B6722 /* ObjectUser.swift in Sources */,
 				FBCD2E1428B6A424000ACBDB /* UserComposeCell.swift in Sources */,
 				77E8BBBF28ABF37F005FE79D /* UserSingleCell.swift in Sources */,
