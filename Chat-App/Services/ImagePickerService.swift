@@ -8,13 +8,25 @@
 import Foundation
 import UIKit
 
-final class ImagePickerService  {
+final class ImagePickerService {
+  
+  static let imagePicker = ImagePickerService()
   
   func showImagePickerController(sourceType: UIImagePickerController.SourceType) {
-    let imagePickerController = UIImagePickerController()
-    imagePickerController.sourceType = sourceType
+    let imagePicker = UIImagePickerController()
+    imagePicker.sourceType = sourceType
+    imagePicker.allowsEditing = true
+    //imagePicker.delegate = Self
+    
   }
-  
-  
-  
+//  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//    if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+//      
+//    }
+//    
+//  }
 }
+
+
+
+

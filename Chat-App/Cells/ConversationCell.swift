@@ -27,7 +27,15 @@ final class ConversationCell: UICollectionViewCell {
     
   func configure(_ conversation: ObjectConversation) -> ConversationCell {
     userNameLabel.text = conversation.id
-    lastMessage.text = conversation.lastMessage
+    lastMessage.text = conversation.lastMessage ?? "Hello World"
+    configureUI()
     return self
   }
  }
+
+private extension ConversationCell {
+  private func configureUI() {
+    userNameLabel.font = .boldSystemFont(ofSize: 15)
+    lastMessage.font = .boldSystemFont(ofSize: 13)
+  }
+}

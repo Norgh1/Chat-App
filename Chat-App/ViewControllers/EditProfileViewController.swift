@@ -48,7 +48,7 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     if let mydata = info[UIImagePickerController.InfoKey(rawValue: users.profileImageURL ?? "")] as? String {
       print("\(mydata)")
-      imageView.kf.setImage(with: URL(string: users.profileImageURL ?? "" ))
+      imageView.kf.setImage(with: URL(string: users.profileImageURL ?? "dsmfkld" ))
     }
     dismiss(animated: true)
   }
