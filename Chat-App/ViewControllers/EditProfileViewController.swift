@@ -25,7 +25,6 @@ final class EditProfileViewController: UIViewController {
     }
   
   @IBAction func imagePressed() {
-    //TODO
     setupPicker()
   }
   
@@ -46,9 +45,15 @@ private extension EditProfileViewController {
 //MARK: UIImagePicker Delegate
 extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    if let mydata = info[UIImagePickerController.InfoKey(rawValue: users.profileImageURL ?? "")] as? String {
-      print("\(mydata)")
-      imageView.kf.setImage(with: URL(string: users.profileImageURL ?? "dsmfkld" ))
+    if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+      Usermanager.shared.editProfile(user: users.self) { response in
+        switch response {
+        case .success(_):
+          self.imageView.image = image
+        case.noConnection, .generalError:
+          break
+        }
+      }
     }
     dismiss(animated: true)
   }
