@@ -7,11 +7,12 @@
 
 import UIKit
 
-final class MessagesViewController: UIViewController {
-  
+final class MessagesViewController: UIViewController, KeyboardHandleable {
+    
   //MARK: Outlets
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var textField: UITextField!
+  @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
   
   //MARK: Public properties
   var conversation = ObjectConversation()
@@ -26,7 +27,7 @@ final class MessagesViewController: UIViewController {
     super.viewDidLoad()
     state = .normal
     observeMessages()
-    setupKeyboardHiding()
+    observeKeyboard()
   }
 }
 
@@ -104,25 +105,7 @@ extension MessagesViewController: UITextFieldDelegate {
     return textField.resignFirstResponder()
   }
 }
-//MARK: TextFiled_show_hide
-extension MessagesViewController {
-  private func setupKeyboardHiding() {
-    NotificationCenter.default.addObserver(self,
-                                           selector: #selector(kayboardWillShow),
-                                           name: UIResponder.keyboardWillShowNotification,
-                                           object: nil)
-    NotificationCenter.default.addObserver(self,
-                                           selector: #selector(keyboardWillHide),
-                                           name: UIResponder.keyboardWillHideNotification,
-                                           object: nil)
-  }
-  @objc func kayboardWillShow() {
-    view.frame.origin.y = view.frame.origin.y - 175
-  }
-  @objc func keyboardWillHide(){
-    view.frame.origin.y = 0
-  }
-}
+
 //MARK: Models
 extension MessagesViewController {
   enum Mode {

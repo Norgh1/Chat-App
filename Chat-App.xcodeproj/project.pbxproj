@@ -13,6 +13,7 @@
 		778246E028A5561A00DB3260 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778246DF28A5561A00DB3260 /* FirestoreService.swift */; };
 		778246E228A55A2100DB3260 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778246E128A55A2100DB3260 /* Identifiable.swift */; };
 		779364C628B5249D00E695DA /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779364C528B5249D00E695DA /* MessageCell.swift */; };
+		77CA63B128C64D2B004B0161 /* KeyboardHandleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CA63B028C64D2B004B0161 /* KeyboardHandleable.swift */; };
 		77CF7C8228A2ACE10093D9B2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8128A2ACE10093D9B2 /* UserManager.swift */; };
 		77CF7C8428A2AED50093D9B2 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */; };
 		77E8BBBF28ABF37F005FE79D /* UserSingleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E8BBBE28ABF37F005FE79D /* UserSingleCell.swift */; };
@@ -65,6 +66,7 @@
 		778246DF28A5561A00DB3260 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		778246E128A55A2100DB3260 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		779364C528B5249D00E695DA /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		77CA63B028C64D2B004B0161 /* KeyboardHandleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandleable.swift; sourceTree = "<group>"; };
 		77CF7C8128A2ACE10093D9B2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		77CF7C8328A2AED50093D9B2 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		77E8BBBE28ABF37F005FE79D /* UserSingleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleCell.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 				778246E128A55A2100DB3260 /* Identifiable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		77CA63B228C64D2E004B0161 /* Protocol Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				77CA63B028C64D2B004B0161 /* KeyboardHandleable.swift */,
+			);
+			path = "Protocol Extensions";
 			sourceTree = "<group>";
 		};
 		77F4AF4028ABE91E00A92B54 /* Cells */ = {
@@ -269,6 +279,7 @@
 				FBCA215428928143005B6722 /* Managers */,
 				FBCA21572892815F005B6722 /* Services */,
 				FBCA215D2892824A005B6722 /* Models */,
+				77CA63B228C64D2E004B0161 /* Protocol Extensions */,
 				778246E328A55A2500DB3260 /* Protocols */,
 				FBCA2167289285C3005B6722 /* Extensions */,
 				FB3165D428BD0FDA000152FA /* Enums */,
@@ -413,6 +424,7 @@
 				FBCA215128928056005B6722 /* FullScreenImageViewController.swift in Sources */,
 				FB4CF5E82893ABC8001540CB /* RotationExtension.swift in Sources */,
 				FB5B0A14289AB6C0002CA342 /* NSAtrributedStringExtension.swift in Sources */,
+				77CA63B128C64D2B004B0161 /* KeyboardHandleable.swift in Sources */,
 				FB7D0112289AC5FD008936CD /* ResizableUICollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
