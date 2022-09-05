@@ -80,7 +80,7 @@ extension ConversationManager {
     service.observe(type: ObjectMessage.self, path: .conversations, documentId: conversationId, secondPath: .messeges) { response in
       switch response {
         case .success(let messages):
-          completion(.success(messages))
+          completion(.success(messages?.sorted(by: {$0.timestamp < $1.timestamp})))
         case .noConnection:
           completion(.noConnection)
         case .generalError:

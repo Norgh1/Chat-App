@@ -12,6 +12,7 @@ final class ObjectMessage: Identifiable {
   var id = UUID().uuidString
 	var recipientIds = UUID().uuidString
   var messageType = MessageType.text
+  var timestamp = Date()
   var content: String?
   
   init(from decoder: Decoder) throws {
@@ -21,6 +22,9 @@ final class ObjectMessage: Identifiable {
     let messageTypeValue = try container.decode(Int.self, forKey: .messageType)
     messageType = MessageType(rawValue: messageTypeValue) ?? .text
     content = try container.decode(String.self, forKey: .content)
+    if let timeValue = try container.decodeIfPresent(Double.self, forKey: .timestamp) {
+      timestamp = Date(timeIntervalSince1970: timeValue)
+    }
   }
   
   func encode(to encoder: Encoder) throws {
@@ -29,6 +33,7 @@ final class ObjectMessage: Identifiable {
     try container.encode(recipientIds, forKey: .recipientIds)
     try container.encode(messageType.rawValue, forKey: .messageType)
     try container.encode(content, forKey: .content)
+    try container.encode(timestamp.timeIntervalSince1970, forKey: .timestamp)
   }
   
   init() {}
@@ -47,5 +52,6 @@ extension ObjectMessage {
     case recipientIds
     case messageType
     case content
+    case timestamp
   }
 }
