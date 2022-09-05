@@ -27,7 +27,7 @@ final class ConversationCell: UICollectionViewCell {
     
   func configure(_ conversation: ObjectConversation) -> ConversationCell {
     userNameLabel.text = conversation.id
-    lastMessage.text = conversation.lastMessage ?? "Hello World"
+    lastMessage.text = conversation.lastMessage
     configureUI()
     return self
   }

@@ -93,8 +93,8 @@ extension ConversationsViewController: UICollectionViewDelegateFlowLayout, UICol
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     guard state == .normal, indexPath.row != 0 else { return }
-    let id = conversations[indexPath.row - 1].id
-    Coordinator.showMessages(conversationId: id, from: self)
+    let conversation = conversations[indexPath.row - 1]
+    Coordinator.showMessages(conversation: conversation, from: self)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -110,14 +110,16 @@ extension ConversationsViewController: UICollectionViewDelegateFlowLayout, UICol
 //MARK: usercompose delegate
 extension ConversationsViewController: UserComposeViewControllerDelegate {
   func show(conversationId: String) {
-    Coordinator.showMessages(conversationId: conversationId, from: self)
+    guard let conversation = conversations.filter({$0.id == conversationId}).first else { return }
+    Coordinator.showMessages(conversation: conversation, from: self)
   }
   
   func newConversation(userId: String) {
     ConversationManager.shared.createConversation(participantId: userId) { response in
       switch response {
         case .success(let conversation):
-          Coordinator.showMessages(conversationId: conversation?.id ?? "", from: self)
+          guard let conversation = conversation else { return }
+          Coordinator.showMessages(conversation: conversation, from: self)
         default: break
       }
     }

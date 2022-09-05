@@ -89,11 +89,13 @@ extension ConversationManager {
     }
   }
   
-  func send(_ message: ObjectMessage, conversationId: String, _ completion: @escaping (NetworkStatus<Void>) -> Void) {
-    service.set(message, documentId: conversationId, path: .conversations, secondPath: .messeges)  { response in
+  func send(_ message: ObjectMessage, conversation: ObjectConversation, _ completion: @escaping (NetworkStatus<Void>) -> Void) {
+    service.set(message, documentId: conversation.id, path: .conversations, secondPath: .messeges)  { response in
       switch response {
         case .success:
           completion(.success(()))
+          conversation.lastMessage = message.content
+          self.service.set(conversation, path: .conversations) { _ in }
         case .noConnection:
           completion(.noConnection)
         case .generalError:

@@ -14,7 +14,7 @@ final class MessagesViewController: UIViewController {
   @IBOutlet weak var textField: UITextField!
   
   //MARK: Public properties
-  var conversationId = ""
+  var conversation = ObjectConversation()
 
   //MARK: private properties
   private var messages = [ObjectMessage]()
@@ -33,7 +33,7 @@ final class MessagesViewController: UIViewController {
 //MARK: Private methods
 private extension MessagesViewController {
   func observeMessages(){
-    ConversationManager.shared.observeMessages(conversationId: conversationId) {[weak self] response in
+    ConversationManager.shared.observeMessages(conversationId: conversation.id) {[weak self] response in
       switch response {
         case.success(let messages):
           self?.messages = messages ?? []
@@ -52,7 +52,7 @@ private extension MessagesViewController {
     message.recipientIds = ""//Usermanager.shared.currentUser?.id ?? ""
     message.messageType = .text
     message.content = messageText
-    ConversationManager.shared.send(message, conversationId: conversationId) { response in
+    ConversationManager.shared.send(message, conversation: conversation) { response in
       switch response {
         case .success:
           self.textField.text = ""
