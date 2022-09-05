@@ -635,7 +635,7 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
+				minimumVersion = 7.3.2;
 			};
 		};
 		FB44AB4E28A40492001501CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -643,7 +643,7 @@
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				minimumVersion = 9.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
